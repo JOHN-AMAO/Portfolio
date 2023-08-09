@@ -155,7 +155,7 @@ const testimonials = [
     testimonial:
       "John's creativity and insightful contributions greatly enrich our school community.",
     name: "Kalu C. Okwuike",
-    designation: "",
+    designation: "Pricipal, Deeper Life High School",
     company: "Deeper Life High School",
     image:
       "https://web.dlhsprojects.org/wp-content/uploads/2023/03/Principal-9.webp",
