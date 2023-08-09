@@ -155,7 +155,7 @@ const testimonials = [
     testimonial:
       "John's creativity and insightful contributions greatly enrich our school community.",
     name: "Kalu C. Okwuike",
-    designation: "Pricipal",
+    designation: "",
     company: "Deeper Life High School",
     image:
       "https://web.dlhsprojects.org/wp-content/uploads/2023/03/Principal-9.webp",
@@ -173,7 +173,7 @@ const testimonials = [
     testimonial:
       "I'm impressed with John's technical skills. His proficiency is evident in the innovative solutions he has  contributed to our comapny. Their ability to grasp complex concepts and apply them is a valuable asset to our team",
     name: "SkyFig Technologies",
-    designation: "CEO",
+    designation: "CEO at SkyFig Technologies",
     company: "SkyFig Technologies",
     image:
       "https://media.licdn.com/dms/image/C4D0BAQFw8j1bVMXqYg/company-logo_200_200/0/1656610125719?e=1699488000&v=beta&t=rbXceJLYG7sG3ox2178V9wsWI7QuNRIXQVtWFd2mbCo",
