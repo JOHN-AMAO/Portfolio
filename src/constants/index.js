@@ -153,27 +153,30 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+      "John's creativity and insightful contributions greatly enrich our school community.",
+    name: "Kalu C. Okwuike",
+    designation: "Pricipal",
+    company: "Deeper Life High School",
+    image:
+      "https://web.dlhsprojects.org/wp-content/uploads/2023/03/Principal-9.webp",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "His programming skills are like magic - he turns lines of code into incredible solutions effortlessly",
+    name: "John Favour",
+    designation: "Writer and Friend",
+    company: "",
+    image:
+      "https://media.licdn.com/dms/image/C4D03AQFRTGs-UshGqQ/profile-displayphoto-shrink_200_200/0/1663532996399?e=1697068800&v=beta&t=olUu1ygdFr2iBfVn9dCEQ_XubaoyfxgIPqgk5AlIha0",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "I'm impressed with John's technical skills. His proficiency is evident in the innovative solutions he has  contributed to our comapny. Their ability to grasp complex concepts and apply them is a valuable asset to our team",
+    name: "SkyFig Technologies",
+    designation: "CEO",
+    company: "SkyFig Technologies",
+    image:
+      "https://media.licdn.com/dms/image/C4D0BAQFw8j1bVMXqYg/company-logo_200_200/0/1656610125719?e=1699488000&v=beta&t=rbXceJLYG7sG3ox2178V9wsWI7QuNRIXQVtWFd2mbCo",
   },
 ];
 
