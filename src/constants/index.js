@@ -1,7 +1,7 @@
 import {
   mobile,
-  backend,
-  creator,
+  // backend,
+  // creator,
   web,
   javascript,
   typescript,
@@ -10,8 +10,8 @@ import {
   reactjs,
   redux,
   tailwind,
-  nodejs,
-  mongodb,
+  // nodejs,
+  // mongodb,
   git,
   figma,
   docker,
@@ -45,14 +45,14 @@ const services = [
     title: "React Native Developer",
     icon: mobile,
   },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
+  // {
+  //   title: "Backend Developer",
+  //   icon: backend,
+  // },
+  // {
+  //   title: "Content Creator",
+  //   icon: creator,
+  // },
 ];
 
 const technologies = [
@@ -84,14 +84,14 @@ const technologies = [
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
+  // {
+  //   name: "Node JS",
+  //   icon: nodejs,
+  // },
+  // {
+  //   name: "MongoDB",
+  //   icon: mongodb,
+  // },
   {
     name: "Three JS",
     icon: threejs,
@@ -153,7 +153,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "John's creativity and insightful contributions greatly enrich our school community.",
+      "John is a coding prodigy. His solutions are nothing short of brilliant, and his coding ability is unmatched. A true standout in our school's tech community..",
     name: "Kalu C. Okwuike",
     designation: "Pricipal, Deeper Life High School",
     company: "Deeper Life High School",
