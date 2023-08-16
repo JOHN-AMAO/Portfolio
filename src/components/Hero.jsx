@@ -26,20 +26,22 @@ const Hero = () => {
             Hi, I&apos;m <span className='text-[#915eff]'>John</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-             <TypewriterComponent
-                options={{
-                  strings: [
-                    "I Build my Ideas.",
-                    "I develop Functional and Scalable Applications ",
-                    "I Code.",
-                    "I Eat.",
-                    "I Sleep.",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-          
+            <TypewriterComponent
+              onInit={(typewriter) => {
+                typewriter.changeDeleteSpeed(10);
+              }}
+              options={{
+                strings: [
+                  "I Build my Ideas.",
+                  "I develop Functional and Scalable Applications ",
+                  "I Code.",
+                  "I Eat.",
+                  "I Sleep.",
+                ],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </p>
         </div>
       </div>
