@@ -34,9 +34,6 @@ const Hero = () => {
                 strings: [
                   "I Build my Ideas.",
                   "I develop Functional and Scalable Applications ",
-                  "I Code.",
-                  "I Eat.",
-                  "I Sleep.",
                 ],
                 autoStart: true,
                 loop: true,
