@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <div className='text-center relative z-0 h-screen bg-primary'>
+        <div className='flex justify-center mt-2/3 text-center relative z-0 h-screen bg-primary'>
           {/* <div
             className='bg-hero-pattern bg-cover
         bg-no-repeat bg-center'
@@ -33,7 +33,7 @@ const App = () => {
             <StarsCanvas /> */}
           <p>
             Got tired of all the stupid animations on this site, new version
-            coming when i am a bit free{" "}
+            coming when i am a bit free.{" "}
           </p>
           {/* </div> */}
         </div>
