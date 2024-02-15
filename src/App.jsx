@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <div className='flex justify-center mt-2/3 text-center relative z-0 h-screen bg-primary'>
+        <div className='flex justify-center mt-20 text-center relative z-0 h-screen bg-primary'>
           {/* <div
             className='bg-hero-pattern bg-cover
         bg-no-repeat bg-center'
