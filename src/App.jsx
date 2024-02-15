@@ -15,12 +15,12 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <div className='relative z-0 bg-primary'>
-          <div
-            className='bg-hero-pattern bg-cover 
+        <div className='relative z-0 h-screen bg-primary'>
+          {/* <div
+            className='bg-hero-pattern bg-cover
         bg-no-repeat bg-center'
-          >
-            {/* <Navbar />
+          > */}
+          {/* <Navbar />
             <Hero />
           </div>
           <About />
@@ -31,11 +31,11 @@ const App = () => {
           <div className='relative z-0'>
             <Contact />
             <StarsCanvas /> */}
-            <p>
-              Got tired of all the stupid animations on this site, new version
-              coming when i am a bit free{" "}
-            </p>
-          </div>
+          <p>
+            Got tired of all the stupid animations on this site, new version
+            coming when i am a bit free{" "}
+          </p>
+          {/* </div> */}
         </div>
       </BrowserRouter>
     </>
