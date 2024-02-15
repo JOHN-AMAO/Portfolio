@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <div className='relative z-0 h-screen bg-primary'>
+        <div className='text-center relative z-0 h-screen bg-primary'>
           {/* <div
             className='bg-hero-pattern bg-cover
         bg-no-repeat bg-center'
