@@ -20,7 +20,7 @@ const App = () => {
             className='bg-hero-pattern bg-cover 
         bg-no-repeat bg-center'
           >
-            <Navbar />
+            {/* <Navbar />
             <Hero />
           </div>
           <About />
@@ -30,7 +30,11 @@ const App = () => {
           <Feedbacks />
           <div className='relative z-0'>
             <Contact />
-            <StarsCanvas />
+            <StarsCanvas /> */}
+            <p>
+              Got tired of all the stupid animations on this site, new version
+              coming when i'm a bit free{" "}
+            </p>
           </div>
         </div>
       </BrowserRouter>
