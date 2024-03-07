@@ -6,7 +6,7 @@ export default function Home() {
       <div className=''>
         <div>
           <Image
-            className='ml-5'
+            className='md:hidden'
             src='/logo.svg'
             width={50}
             height={50}

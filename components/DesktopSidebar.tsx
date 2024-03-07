@@ -8,6 +8,13 @@ const DesktopSidebar = () => {
 
   return (
     <div className='hidden lg:inline-block'>
+      <Image
+        className='ml-[20px]'
+        src='/logo.svg'
+        width={50}
+        height={50}
+        alt='my logo'
+      />
       <div className='flex flex-col gap-4 justify-center h-screen ml-5 '>
         <div className='flex flex-col gap-10 bg-[#16234b] rounded-2xl border px-4 py-10 border-blue-600'>
           <Link
