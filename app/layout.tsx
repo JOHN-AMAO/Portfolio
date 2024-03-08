@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import DesktopSidebar from "@/components/DesktopSidebar";
 import MobileNav from "@/components/MobileNav";
+import LeftSideBar from "@/components/LeftSideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${inter.className}  m-5 bg-[#0e1631] `}>
-        <div className='flex flex-row'>
+        <div className='flex flex-row '>
           <DesktopSidebar />
           {children}
         </div>

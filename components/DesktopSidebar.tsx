@@ -16,7 +16,7 @@ const DesktopSidebar = () => {
         alt='my logo'
       />
       <div className='flex flex-col gap-4 justify-center h-screen ml-5 '>
-        <div className='flex flex-col gap-10 bg-[#16234b] rounded-2xl border px-4 py-10 border-blue-600'>
+        <div className='flex flex-col gap-8 bg-[#16234b] rounded-2xl border px-4 py-8 border-blue-600'>
           <Link
             href='/'
             className={
