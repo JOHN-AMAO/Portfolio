@@ -8,15 +8,7 @@ const MobileNav = () => {
 
   return (
     <div>
-      <div>
-        <Image
-          className='md:hidden'
-          src='/logo.svg'
-          width={50}
-          height={50}
-          alt='my logo'
-        />
-      </div>
+      <div></div>
       <div className='md:hidden fixed bottom-0 left-0 bg-transparent right-0 shadow-md'>
         <div className='flex flex-row justify-evenly w-full ml-5 mb-5'>
           <Link
