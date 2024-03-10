@@ -15,6 +15,9 @@ import { useForm } from "react-hook-form";
 import TextareaAutosize from "react-textarea-autosize";
 import "@/styles/editor.css";
 import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+import { toast } from "@/components/ui/use-toast";
+import { Icons } from "@/components/icons";
 
 const editor = new EditorJs({
   holder: "editorjs",
