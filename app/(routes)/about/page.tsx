@@ -35,7 +35,7 @@ const Page = () => {
         </div>
         <Image
           className='rounded-2xl md:ml-16 w-1/2 md:w-1/3 md:mt-10 rotate-1'
-          src='/myimage.jpg'
+          src='/myimage.png'
           alt='my image'
           width={400}
           height={200}
