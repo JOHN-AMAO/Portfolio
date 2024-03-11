@@ -36,7 +36,8 @@
     "react-textarea-autosize": "^8.5.3",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
-    "typewriter-effect": "^2.19.1"
+    "typewriter-effect": "^2.19.1",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/editorjs__header": "^2.6.3",

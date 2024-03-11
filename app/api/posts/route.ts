@@ -1,4 +1,9 @@
 import { db } from "@/lib/db";
+import * as z from "zod";
+const postCreateSchema = z.object({
+  title: z.string(),
+  content: z.string().optional(),
+});
 
 export async function GET() {
   try {
@@ -23,7 +28,7 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const json = await req.json();
-    const body = json;
+    const body = postCreateSchema.parse(json);
 
     const post = await db.post.create({
       data: {
