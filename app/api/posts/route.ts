@@ -10,7 +10,7 @@ export async function GET() {
         createdAt: true,
       },
       where: {
-        authorId: "AJy",
+        authorId: "123456789012345678901234",
       },
     });
 
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
       data: {
         title: body.title,
         content: body.content,
-        authorId: "AJy",
+        authorId: "123456789012345678901234",
       },
       select: {
         id: true,

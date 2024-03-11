@@ -1,15 +1,8 @@
 "use client";
-import React, { useRef, useState } from "react";
-import EditorJs from "@editorjs/editorjs";
-import Header from "@editorjs/header";
-import List from "@editorjs/list";
-import Table from "@editorjs/table";
-import Code from "@editorjs/code";
-import LinkTool from "@editorjs/link";
-import Embed from "@/editorjs/embed";
-import InlineCode from "@editorjs/inlinecode";
-import { useRouter } from "next/navigation";
+
+import * as React from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import TextareaAutosize from "react-textarea-autosize";
 import "@/styles/editor.css";
@@ -18,34 +11,52 @@ import { buttonVariants } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/icons";
 
-const editor = new EditorJs({
-  holder: "editor",
-  onReady() {
-    ref.current = editor;
-  },
-  placeholder: "Type here to write your post...",
-  inlineToolbar: true,
-  data: body.content,
-  tools: {
-    header: Header,
-    list: List,
-    table: Table,
-    code: Code,
-    link: LinkTool,
-    embed: Embed,
-    Inlinecode: InlineCode,
-  },
-});
+export function Editor({ post }) {
+  const { register, handleSubmit } = useForm();
+  const ref = React.useRef();
+  const router = useRouter();
+  const [isSaving, setIsSaving] = React.useState(false);
+  const [isMounted, setIsMounted] = React.useState(false);
 
-const Editor = ({ post }) => {
-  if (!ref.current) {
-    editor;
-  }
+  const initializeEditor = React.useCallback(async () => {
+    const EditorJS = (await import("@editorjs/editorjs")).default;
+    const Header = (await import("@editorjs/header")).default;
+    const Embed = (await import("@editorjs/embed")).default;
+    const Table = (await import("@editorjs/table")).default;
+    const List = (await import("@editorjs/list")).default;
+    const Code = (await import("@editorjs/code")).default;
+    const LinkTool = (await import("@editorjs/link")).default;
+    const InlineCode = (await import("@editorjs/inline-code")).default;
+
+    const body = post;
+
+    if (!ref.current) {
+      const editor = new EditorJS({
+        holder: "editor",
+        onReady() {
+          ref.current = editor;
+        },
+        placeholder: "Type here to write your post...",
+        inlineToolbar: true,
+        data: body.content,
+        tools: {
+          header: Header,
+          linkTool: LinkTool,
+          list: List,
+          code: Code,
+          inlineCode: InlineCode,
+          table: Table,
+          embed: Embed,
+        },
+      });
+    }
+  }, [post]);
+
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       setIsMounted(true);
     }
-  }, []);
+  });
 
   React.useEffect(() => {
     if (isMounted) {
@@ -56,13 +67,7 @@ const Editor = ({ post }) => {
         ref.current = undefined;
       };
     }
-  });
-
-  const { register, handleSubmit } = useForm();
-  const ref = useRef();
-  const router = useRouter();
-  const [isSaving, setIsSaving] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  }, [isMounted, initializeEditor]);
 
   async function onSubmit(data) {
     setIsSaving(true);
@@ -153,6 +158,4 @@ const Editor = ({ post }) => {
       </div>
     </form>
   );
-};
-
-export default Editor;
+}
