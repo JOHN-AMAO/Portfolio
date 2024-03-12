@@ -13,11 +13,7 @@ import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/icons";
 import { Post } from "@prisma/client";
 
-interface EditorProps {
-  post: Pick<Post, "id" | "title" | "content" | "published">;
-}
-
-export function Editor({ post }: EditorProps) {
+export function Editor({ post }) {
   const { register, handleSubmit } = useForm();
   const ref = React.useRef();
   const router = useRouter();
@@ -126,9 +122,9 @@ export function Editor({ post }: EditorProps) {
                 Back
               </>
             </Link>
-            <p className='text-sm text-muted-foreground'>
+            {/* <p className='text-sm text-muted-foreground'>
               {post.published ? "Published" : "Draft"}
-            </p>
+            </p> */}
           </div>
           <button
             type='submit'
