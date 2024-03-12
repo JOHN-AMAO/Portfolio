@@ -127,7 +127,7 @@ export function ReadOnlyEditor({ post }) {
             </p> */}
           </div>
         </div>
-        <div className='prose prose-stone mx-auto w-[800px] dark:prose-invert'>
+        <div className='prose prose-stone mx-auto w-full md:w-[800px] dark:prose-invert'>
           <h1
             id='title'
             className='w-full resize-none appearance-none overflow-hidden bg-transparent text-5xl font-bold focus:outline-none'
