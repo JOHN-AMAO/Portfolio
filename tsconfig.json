@@ -26,7 +26,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "components/Editor.tsx"
+    "components/Editor.tsx",
+    "motion.js"
   ],
   "exclude": ["node_modules"]
 }
