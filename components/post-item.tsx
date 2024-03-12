@@ -6,8 +6,12 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { PostOperations } from "@/components/post-operations";
 
 interface PostItemProps {
-  post: Pick<Post, "id" | "title" | "published" | "createdAt">;
+  post: Pick<Post, "id" | "title" | "createdAt">;
 }
+
+// interface PostItemProps {
+//   post: Pick<Post, "id" | "title" | "published" | "createdAt">;
+// }
 
 export function PostItem({ post }: PostItemProps) {
   return (
