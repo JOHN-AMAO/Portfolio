@@ -17,7 +17,6 @@ export function ReadOnlyEditor({ post }) {
   const { register, handleSubmit } = useForm();
   const ref = React.useRef();
   const router = useRouter();
-  const [isSaving, setIsSaving] = React.useState(false);
   const [isMounted, setIsMounted] = React.useState(false);
 
   const initializeEditor = React.useCallback(async () => {
@@ -115,7 +114,7 @@ export function ReadOnlyEditor({ post }) {
         <div className='flex w-full items-center justify-between'>
           <div className='flex items-center space-x-10'>
             <Link
-              href='/secret'
+              href='/blog'
               className={cn(buttonVariants({ variant: "ghost" }))}
             >
               <>
@@ -127,25 +126,14 @@ export function ReadOnlyEditor({ post }) {
               {post.published ? "Published" : "Draft"}
             </p> */}
           </div>
-          <button
-            type='submit'
-            className={cn(buttonVariants())}
-          >
-            {isSaving && (
-              <Icons.spinner className='mr-2 h-4 w-4 animate-spin' />
-            )}
-            <span>Save</span>
-          </button>
         </div>
         <div className='prose prose-stone mx-auto w-[800px] dark:prose-invert'>
-          <TextareaAutosize
-            autoFocus
+          <h1
             id='title'
-            defaultValue={post.title}
-            placeholder='Post title'
             className='w-full resize-none appearance-none overflow-hidden bg-transparent text-5xl font-bold focus:outline-none'
-            {...register("title")}
-          />
+          >
+            {post.title}
+          </h1>
           <div
             id='editor'
             className='min-h-[500px]'

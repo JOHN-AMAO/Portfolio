@@ -4,6 +4,7 @@ import { EmptyPlaceholder } from "@/components/empty-placeholder";
 import { DashboardHeader } from "@/components/header";
 import { PostItem } from "@/components/post-item";
 import { DashboardShell } from "@/components/shell";
+import { PostItemRead } from "@/components/post-item-read";
 
 export const metadata = {
   title: "Dashboard",
@@ -39,7 +40,7 @@ export default async function BlogPage() {
           {posts?.length ? (
             <div className='divide-y divide-border rounded-md border m-6'>
               {posts.map((post) => (
-                <PostItem
+                <PostItemRead
                   key={post.id}
                   post={post}
                 />
