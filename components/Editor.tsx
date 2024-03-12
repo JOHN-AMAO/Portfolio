@@ -110,11 +110,11 @@ export function Editor({ post }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='grid w-full gap-10'>
+      <div className='grid w-full gap-10 text-white'>
         <div className='flex w-full items-center justify-between'>
           <div className='flex items-center space-x-10'>
             <Link
-              href='/dashboard'
+              href='/secret'
               className={cn(buttonVariants({ variant: "ghost" }))}
             >
               <>

@@ -26,13 +26,17 @@ export default async function EditorPage({ params }: EditorPageProps) {
   }
 
   return (
-    <Editor
-      post={{
-        id: post.id,
-        title: post.title,
-        content: post.content,
-        //published: post.published,
-      }}
-    />
+    <>
+      <div className='md:ml-20'>
+        <Editor
+          post={{
+            id: post.id,
+            title: post.title,
+            content: post.content,
+            //published: post.published,
+          }}
+        />
+      </div>
+    </>
   );
 }
