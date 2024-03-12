@@ -40,7 +40,7 @@ export default async function DashboardPage() {
             <PostCreateButton />
           </div>
           {posts?.length ? (
-            <div className='divide-y divide-border rounded-md border'>
+            <div className='divide-y divide-border rounded-md border m-6'>
               {posts.map((post) => (
                 <PostItem
                   key={post.id}

@@ -73,7 +73,7 @@ export function PostCreateButton({
       {isLoading ? (
         <Icons.spinner className='mr-2 h-4 w-4 animate-spin' />
       ) : (
-        <Icons.add className='mr-2 h-4 w-4' />
+        <Icons.add className='mr-2 h-4 w-4  bg-blue-500 text-white' />
       )}
       New post
     </button>
