@@ -2,7 +2,6 @@ import { db } from "@/lib/db";
 
 import { EmptyPlaceholder } from "@/components/empty-placeholder";
 import { DashboardHeader } from "@/components/header";
-import { PostItem } from "@/components/post-item";
 import { DashboardShell } from "@/components/shell";
 import { PostItemRead } from "@/components/post-item-read";
 
@@ -27,12 +26,12 @@ export default async function BlogPage() {
   });
 
   return (
-    <div className='flex justify-center h-screen ml-20 mt-10'>
+    <div className='flex justify-center h-screen md:ml-20 md:mt-10 mt-5'>
       <DashboardShell>
         <div className='flex'>
           <DashboardHeader
             heading='Blog'
-            text='Here are some ideas thaat run through my mind'
+            text='My Ideas, learnings and opinions.'
           />
         </div>
         <div className='text-white flex flex-col gap-2'>
