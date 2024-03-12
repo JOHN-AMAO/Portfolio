@@ -15,11 +15,11 @@ interface PostItemProps {
 
 export function PostItem({ post }: PostItemProps) {
   return (
-    <div className='flex items-center justify-between p-4'>
-      <div className='grid gap-1'>
+    <div className='flex items-center justify-between p-4 '>
+      <div className='grid gap-1 w-full'>
         <Link
           href={`/editor/${post.id}`}
-          className='font-semibold hover:underline'
+          className='font-semibold hover:underline hover:bg-green-800 transition'
         >
           {post.title}
         </Link>

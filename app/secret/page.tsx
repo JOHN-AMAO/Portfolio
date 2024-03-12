@@ -27,34 +27,39 @@ export default async function DashboardPage() {
   });
 
   return (
-    <DashboardShell>
-      <DashboardHeader
-        heading='Posts'
-        text='Create and manage posts.'
-      >
-        <PostCreateButton />
-      </DashboardHeader>
-      <div>
-        {posts?.length ? (
-          <div className='divide-y divide-border rounded-md border'>
-            {posts.map((post) => (
-              <PostItem
-                key={post.id}
-                post={post}
-              />
-            ))}
+    <div className='flex justify-center h-screen ml-20 mt-10'>
+      <DashboardShell>
+        <div className='flex'>
+          <DashboardHeader
+            heading='Blog'
+            text='A canvas for your creative ideas.'
+          />
+        </div>
+        <div className='text-white flex flex-col gap-2'>
+          <div>
+            <PostCreateButton />
           </div>
-        ) : (
-          <EmptyPlaceholder>
-            <EmptyPlaceholder.Icon name='post' />
-            <EmptyPlaceholder.Title>No posts created</EmptyPlaceholder.Title>
-            <EmptyPlaceholder.Description>
-              You don&apos;t have any posts yet. Start creating content.
-            </EmptyPlaceholder.Description>
-            <PostCreateButton variant='outline' />
-          </EmptyPlaceholder>
-        )}
-      </div>
-    </DashboardShell>
+          {posts?.length ? (
+            <div className='divide-y divide-border rounded-md border'>
+              {posts.map((post) => (
+                <PostItem
+                  key={post.id}
+                  post={post}
+                />
+              ))}
+            </div>
+          ) : (
+            <EmptyPlaceholder>
+              <EmptyPlaceholder.Icon name='post' />
+              <EmptyPlaceholder.Title>No posts created</EmptyPlaceholder.Title>
+              <EmptyPlaceholder.Description>
+                You don&apos;t have any posts yet. Start creating content.
+              </EmptyPlaceholder.Description>
+              <PostCreateButton variant='outline' />
+            </EmptyPlaceholder>
+          )}
+        </div>
+      </DashboardShell>
+    </div>
   );
 }
