@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -52,11 +52,11 @@ export function Editor({ post }) {
     }
   }, [post]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (typeof window !== "undefined") {
       setIsMounted(true);
     }
-  });
+  }, []);
 
   React.useEffect(() => {
     if (isMounted) {
