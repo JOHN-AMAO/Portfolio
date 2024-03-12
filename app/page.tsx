@@ -67,7 +67,7 @@ export default function Home() {
                 {isHovered ? (
                   ""
                 ) : (
-                  <h2 className='md:text-3xl sm:text-xl text-white font-extrabold '>
+                  <h2 className='md:text-2xl sm:text-xl text-white font-extrabold '>
                     Let&apos;s Build Together.
                   </h2>
                 )}
