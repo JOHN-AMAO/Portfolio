@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "John Amao || AJy",
-  description: "This is the official website of John Amao",
+  description: "This is the official website of John Amao.",
   icons: "./favicon.ico",
 };
 
