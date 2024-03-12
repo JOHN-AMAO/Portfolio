@@ -56,7 +56,7 @@ export default function Home() {
                 <Image
                   className={` ${
                     isHovered
-                      ? "rotate-45 translate-x-60 transition-all duration-500"
+                      ? "md:rotate-45 md:translate-x-60 transition-all duration-500"
                       : "transition-all duration-500"
                   }`}
                   src='/rocket.svg'
@@ -67,7 +67,7 @@ export default function Home() {
                 {isHovered ? (
                   ""
                 ) : (
-                  <h2 className='text-3xl sm:text-xl text-white font-extrabold '>
+                  <h2 className='md:text-3xl sm:text-xl text-white font-extrabold '>
                     Let&apos;s Build Together.
                   </h2>
                 )}
