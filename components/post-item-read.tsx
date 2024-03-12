@@ -29,7 +29,6 @@ export function PostItemRead({ post }: PostItemProps) {
           </p>
         </div>
       </div>
-      <PostOperations post={{ id: post.id, title: post.title }} />
     </div>
   );
 }
