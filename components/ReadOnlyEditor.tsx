@@ -5,13 +5,11 @@ import * as React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-import TextareaAutosize from "react-textarea-autosize";
 import "@/styles/editor.css";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/icons";
-import { Post } from "@prisma/client";
 
 export function ReadOnlyEditor({ post }) {
   const { register, handleSubmit } = useForm();
