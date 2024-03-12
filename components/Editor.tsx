@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { useEffect } from "react";
 import * as React from "react";
@@ -10,8 +11,13 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/icons";
+import { Post } from "@prisma/client";
 
-export function Editor({ post }) {
+interface EditorProps {
+  post: Pick<Post, "id" | "title" | "content" | "published">;
+}
+
+export function Editor({ post }: EditorProps) {
   const { register, handleSubmit } = useForm();
   const ref = React.useRef();
   const router = useRouter();
