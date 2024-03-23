@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className='bg-[#0e1631]'>
       <div className='relative'>
-        <div className='flex flex-col justify-center  h-screen md:ml-10 mt-20 sm:mt-0 '>
+        <div className='flex flex-col justify-center  h-screen md:ml-10 mt-20 sm:mt-0 lg:mb-5 sm:mb-20'>
           <div className='flex md:flex-row flex-col justify-evenly'>
             <div className='flex flex-col mr-20 gap-4'>
               <h1 className=' text-white  mb-4 text-xl font-extrabold tracking-tight leading-none md:text-3xl dark:text-white'>
@@ -20,7 +20,7 @@ export default function Home() {
                 </span>
               </h1>
               <div className='p-2 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white mb-4 text-xl font-extrabold  md:text-4xl dark:text-white'>
-                <div className='mb-2'>I,</div>
+                <div className='mb-2'>I</div>
                 <Typewriter
                   options={{
                     strings: [

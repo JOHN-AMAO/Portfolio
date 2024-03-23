@@ -2,9 +2,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const MobileNav = () => {
-  const [activeLink, setActiveLink] = useState("/");
+  const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState(pathname);
 
   return (
     <div>

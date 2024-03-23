@@ -2,9 +2,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const DesktopSidebar = () => {
-  const [activeLink, setActiveLink] = useState("/");
+  const pathname = usePathname();
+  const [activeLink, setActiveLink] = useState(pathname);
 
   return (
     <div className='hidden lg:inline-block'>
@@ -15,6 +17,7 @@ const DesktopSidebar = () => {
         height={50}
         alt='my logo'
       />
+      {pathname}
       <div className='flex flex-col gap-4 justify-center h-screen ml-5 w-20'>
         <div className='flex flex-col gap-8 bg-[#16234b] rounded-2xl border px-4 py-8 border-blue-600'>
           <Link
