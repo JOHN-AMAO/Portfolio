@@ -17,7 +17,6 @@ const DesktopSidebar = () => {
         height={50}
         alt='my logo'
       />
-      {pathname}
       <div className='flex flex-col gap-4 justify-center h-screen ml-5 w-20'>
         <div className='flex flex-col gap-8 bg-[#16234b] rounded-2xl border px-4 py-8 border-blue-600'>
           <Link
