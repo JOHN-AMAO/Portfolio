@@ -46,7 +46,7 @@ export default function Home() {
               height={300}
             />
           </div>
-          <div className='mt-10 lg:mt-0 mb-60'>
+          <div className='mt-10 lg:mt-0'>
             <div
               className='max-w-sm p-6 bg-[#0e1631] border border-gray-200 rounded-lg shadow '
               onMouseEnter={() => setIsHover(true)}
