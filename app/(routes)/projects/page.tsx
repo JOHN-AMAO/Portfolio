@@ -3,7 +3,7 @@ import React from "react";
 
 const Page = () => {
   return (
-    <div className='flex flex-col gap-6 justify-center text-white items-center md:ml-20 '>
+    <div className='flex flex-col gap-6 justify-center text-white items-center md:ml-20'>
       <div className=' flex flex-col w-3/4 p-5'>
         <h1 className='text-xl md:text-4xl mt-5 mb-5'>Projects.</h1>
         <h1 className='text-lg md:text-4xl mb-4 p-4 rounded font-serif font-extrabold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 '>
@@ -21,7 +21,7 @@ const Page = () => {
           </Link>
         </p>
       </div>
-      <div className=' md:grid md:grid-cols-3 flex flex-col gap-4  mx-10'>
+      <div className=' md:grid md:grid-cols-3 flex flex-col gap-4  mx-10 mb-60'>
         <Link href='https://xhangout.vercel.app/'>
           <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg '>
             <div className='flex flex-row justify-between m-2 '>
@@ -38,7 +38,7 @@ const Page = () => {
           </div>
         </Link>
 
-        <div className='flex flex-col p-4 bg-[#142149] rotate-2 hover:rotate-0 rounded-lg'>
+        <div className='flex flex-col p-4 bg-[#142149] rotate-2 hover:rotate-0 rounded-lg '>
           <div className='flex flex-row justify-between m-2'>
             <h1 className='text-xl'>LaunchPad</h1>
             <p className='border border-gray-800 p-1 rounded-lg bg-green-600'>

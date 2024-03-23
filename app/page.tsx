@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className='bg-[#0e1631]'>
       <div className='relative'>
-        <div className='flex flex-col justify-center  h-screen md:ml-10 mt-20 sm:mt-0 lg:mb-5 sm:mb-20'>
+        <div className='flex flex-col justify-center  h-screen md:ml-10 mt-20 sm:mt-0 '>
           <div className='flex md:flex-row flex-col justify-evenly'>
             <div className='flex flex-col mr-20 gap-4'>
               <h1 className=' text-white  mb-4 text-xl font-extrabold tracking-tight leading-none md:text-3xl dark:text-white'>
@@ -46,7 +46,7 @@ export default function Home() {
               height={300}
             />
           </div>
-          <div className='mt-10 lg:mt-0'>
+          <div className='mt-10 lg:mt-0 mb-60'>
             <div
               className='max-w-sm p-6 bg-[#0e1631] border border-gray-200 rounded-lg shadow '
               onMouseEnter={() => setIsHover(true)}
