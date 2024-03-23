@@ -4,7 +4,7 @@ import React from "react";
 const Page = () => {
   return (
     <div className=''>
-      <div className='flex md:flex-row flex-col-reverse mt-10 items-center justify-between'>
+      <div className='flex md:flex-row flex-col-reverse gap-5 mt-10 items-center justify-between'>
         <div className='flex flex-col gap-6 justify-center   md:ml-20 md:mt-[-200px]'>
           <h1 className=' text-white  mb-4 text-xl font-extrabold tracking-tight leading-none md:text-4xl dark:text-white'>
             Hi, I&apos;m{" "}
@@ -15,9 +15,9 @@ const Page = () => {
           <div className='text-white border rounded-2xl p-4  text-left max-w-xl'>
             <h2 className='font-bold text-2xl text-white'>Bio:</h2>
             <p>
-              I am a builder currently based in Lagos, Nigeria. I&apos;m
-              passionate about building products that solve problems for lots of
-              people ranging from education to commerce.
+              I am an 18 year old builder currently based in Lagos, Nigeria.
+              I&apos;m passionate about building products that solve problems
+              for lots of people ranging from education to commerce.
             </p>
             <p className=' leading-relaxed mt-4'>
               I love developing intuitive user interfaces, optimizing backend
@@ -34,7 +34,7 @@ const Page = () => {
           </div>
         </div>
         <Image
-          className='rounded-2xl md:ml-16 w-1/2 md:w-1/3 md:mt-10 rotate-1'
+          className='rounded-2xl md:ml-16 w-1/2 md:w-1/3 md:mt-10 lg:rotate-1'
           src='/myimage.png'
           alt='my image'
           width={400}

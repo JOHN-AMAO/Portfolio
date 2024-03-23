@@ -20,8 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className}  m-5 bg-[#0e1631] lg:mb-5 sm:mb-10`}>
-        <div className='flex flex-row '>
+      <body className={`${inter.className}  m-5 bg-[#0e1631] `}>
+        <div className='flex flex-row lg:mb-5 sm:mb-15'>
           <DesktopSidebar />
           {children}
         </div>
