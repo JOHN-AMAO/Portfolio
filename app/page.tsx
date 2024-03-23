@@ -9,7 +9,7 @@ export default function Home() {
   const [isHovered, setIsHover] = useState(false);
   return (
     <main className='bg-[#0e1631]'>
-      <div className='relative'>
+      <div className='relative mb-60'>
         <div className='flex flex-col justify-center  h-screen md:ml-10 mt-20 sm:mt-0 '>
           <div className='flex md:flex-row flex-col justify-evenly'>
             <div className='flex flex-col mr-20 gap-4'>
