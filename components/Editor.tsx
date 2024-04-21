@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/icons";
+import { uploadFiles } from "@/lib/uploadthing";
 import { Post } from "@prisma/client";
 
 export function Editor({ post }) {
@@ -29,6 +30,7 @@ export function Editor({ post }) {
     const Code = (await import("@editorjs/code")).default;
     const LinkTool = (await import("@editorjs/link")).default;
     const InlineCode = (await import("@editorjs/inline-code")).default;
+    const ImageTool = (await import("@editorjs/image")).default;
 
     const body = post;
 
@@ -49,6 +51,24 @@ export function Editor({ post }) {
           inlineCode: InlineCode,
           table: Table,
           embed: Embed,
+          image: {
+            class: ImageTool,
+            config: {
+              uploader: {
+                async uploadByFile(file: File) {
+                  // upload to uploadthing
+                  const [res] = await uploadFiles([file], "imageUploader");
+
+                  return {
+                    success: 1,
+                    file: {
+                      url: res.fileUrl,
+                    },
+                  };
+                },
+              },
+            },
+          },
         },
       });
     }
