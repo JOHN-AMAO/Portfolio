@@ -54,18 +54,8 @@ export function Editor({ post }) {
           image: {
             class: ImageTool,
             config: {
-              uploader: {
-                async uploadByFile(file: File) {
-                  // upload to uploadthing
-                  const [res] = await uploadFiles([file], "imageUploader");
-
-                  return {
-                    success: 1,
-                    file: {
-                      url: res.fileUrl,
-                    },
-                  };
-                },
+              endpoints: {
+                byFile: "/api/uploadthing", // Your backend file uploader endpoint
               },
             },
           },
