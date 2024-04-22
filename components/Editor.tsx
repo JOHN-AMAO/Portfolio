@@ -45,7 +45,12 @@ export function Editor({ post }) {
         data: body.content,
         tools: {
           header: Header,
-          linkTool: LinkTool,
+          linkTool: {
+            class: LinkTool,
+            config: {
+              endpoint: "/api/link",
+            },
+          },
           list: List,
           code: Code,
           inlineCode: InlineCode,
@@ -54,8 +59,18 @@ export function Editor({ post }) {
           image: {
             class: ImageTool,
             config: {
-              endpoints: {
-                byFile: "/api/uploadthing", // Your backend file uploader endpoint
+              uploader: {
+                async uploadByFile(file: File) {
+                  // upload to uploadthing
+                  const [res] = await uploadFiles([file], "imageUploader");
+
+                  return {
+                    success: 1,
+                    file: {
+                      url: res.fileUrl,
+                    },
+                  };
+                },
               },
             },
           },
