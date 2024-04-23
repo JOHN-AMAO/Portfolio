@@ -61,8 +61,9 @@ export function Editor({ post }) {
             config: {
               uploader: {
                 async uploadByFile(file: File) {
-                  const [res] = await uploadFiles([file], "imageUploader");
-
+                  const res = await uploadFiles("imageUploader", {
+                    files: [file],
+                  });
                   return {
                     success: 1,
                     file: {
@@ -173,13 +174,6 @@ export function Editor({ post }) {
             id='editor'
             className='min-h-[500px]'
           />
-          <p className='text-sm text-gray-500'>
-            Use{" "}
-            <kbd className='rounded-md border bg-muted px-1 text-xs uppercase'>
-              Tab
-            </kbd>{" "}
-            to open the command menu.
-          </p>
         </div>
       </div>
     </form>
