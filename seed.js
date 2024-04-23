@@ -14,7 +14,7 @@ async function seedData() {
       data: [
         {
           title: "First Post",
-          content: { text: "This is the content of the first post." },
+          content: { text: "This is the content of the first post" },
           published: true,
           createdAt: new Date(),
           updatedAt: new Date(),
