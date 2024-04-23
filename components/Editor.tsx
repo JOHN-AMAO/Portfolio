@@ -64,12 +64,21 @@ export function Editor({ post }) {
                   const res = await uploadFiles("imageUploader", {
                     files: [file],
                   });
-                  return {
-                    success: 1,
-                    file: {
-                      url: res.fileUrl,
-                    },
-                  };
+                  console.log(res);
+                  if (Array.isArray(res) && res.length > 0) {
+                    const firstResponse = res[0];
+                    const { serverData } = firstResponse;
+                    if (serverData && serverData.fileUrl) {
+                      return {
+                        success: 1,
+                        file: {
+                          url: serverData.fileUrl,
+                        },
+                      };
+                    }
+                  }
+
+                  return null;
                 },
               },
             },
