@@ -61,7 +61,6 @@ export function Editor({ post }) {
             config: {
               uploader: {
                 async uploadByFile(file: File) {
-                  // upload to uploadthing
                   const [res] = await uploadFiles([file], "imageUploader");
 
                   return {
