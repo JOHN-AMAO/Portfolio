@@ -37,6 +37,21 @@ const Page = () => {
             </p>
           </div>
         </Link>
+        <Link href='https://spectrum-finance.vercel.app/'>
+          <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg'>
+            <div className='flex flex-row justify-between m-2 '>
+              <h1 className='text-xl'>Spectrum finance</h1>
+              <p className='border border-gray-800 p-1 rounded-lg bg-green-400'>
+                Open Source
+              </p>
+            </div>
+            <p>
+              Spectrum finance is an app built for users to be able to make
+              transactions, expense tracking and seamless financial management,
+              powered by the chimoney api
+            </p>
+          </div>
+        </Link>
 
         <div className='flex flex-col p-4 bg-[#142149] rotate-2 hover:rotate-0 rounded-lg '>
           <div className='flex flex-row justify-between m-2'>
