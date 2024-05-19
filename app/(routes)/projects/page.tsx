@@ -81,7 +81,7 @@ const Page = () => {
             </p>
           </div>
         </Link>
-        <Link href='https://github.com/JOHN-AMAO'>
+        <Link href='https://www.youtube.com/watch?v=JUCIMcGAh94&t=124s&pp=ygULZ2VuenRlY2hpZXM%3D'>
           <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg'>
             <div className='flex flex-row justify-between m-2'>
               <h1 className='text-xl'>SkillSphere ai</h1>
