@@ -26,6 +26,7 @@ export function ReadOnlyEditor({ post }) {
     const Code = (await import("@editorjs/code")).default;
     const LinkTool = (await import("@editorjs/link")).default;
     const InlineCode = (await import("@editorjs/inline-code")).default;
+    const ImageTool = (await import("@editorjs/image")).default;
 
     const body = post;
 
@@ -47,6 +48,7 @@ export function ReadOnlyEditor({ post }) {
           inlineCode: InlineCode,
           table: Table,
           embed: Embed,
+          image: ImageTool,
         },
       });
     }
