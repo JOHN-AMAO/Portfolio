@@ -15,7 +15,7 @@ const Page = () => {
           <div className='text-white border rounded-2xl p-4  text-left max-w-xl'>
             <h2 className='font-bold text-2xl text-white'>Bio:</h2>
             <p>
-              I am an 18 year old builder currently based in Lagos, Nigeria.
+              I am a builder currently based in Lagos, Nigeria.
               I&apos;m passionate about building products that solve problems
               for lots of people ranging from education to commerce.
             </p>
