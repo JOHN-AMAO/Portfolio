@@ -22,6 +22,21 @@ const Page = () => {
         </p>
       </div>
       <div className=' md:grid md:grid-cols-3 flex flex-col gap-4  mx-10 mb-60'>
+        <Link href='https://github.com/JOHN-AMAO/WokPilot'>
+          <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg '>
+            <div className='flex flex-row justify-between m-2 '>
+              <h1 className='text-xl'>WorkPilot</h1>
+              <p className='border border-gray-800 p-1 rounded-lg bg-green-400'>
+                Open Source Project
+              </p>
+            </div>
+            <p>
+              WorkPilot is a Project and Task management platforms that allows
+              teams to collaborate through chat, video and voice calls, and
+              schedule tasks using a collaborative Kanban Board.
+            </p>
+          </div>
+        </Link>
         <Link href='https://xhangout.vercel.app/'>
           <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg '>
             <div className='flex flex-row justify-between m-2 '>
