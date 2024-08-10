@@ -27,7 +27,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/Editor.tsx",
-    "motion.js"
+    "motion.js",
+    "app/api/callback/route.js"
   ],
   "exclude": ["node_modules"]
 }
