@@ -22,7 +22,7 @@ const Page = () => {
         </p>
       </div>
       <div className=' md:grid md:grid-cols-3 flex flex-col gap-4  mx-10 mb-60'>
-        <Link href='https://wokpilot-production.up.railway.app/'>
+        <Link href='https://youtu.be/fkluyMvBKTs'>
           <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg '>
             <div className='flex flex-row justify-between m-2 '>
               <h1 className='text-xl'>WorkPilot</h1>
