@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { FaHome, FaUser, FaBlog, FaEnvelope, FaRProject, FaFilePdf, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { CheckCheck } from "lucide-react";
+import { BookOpen, CheckCheck } from "lucide-react";
 
 export default function Home() {
   const [isHovered, setIsHover] = useState(false);
@@ -16,8 +16,8 @@ export default function Home() {
   const items = [
     { title: "Home", icon: <FaHome />, href: "/" },
     { title: "About", icon: <FaUser />, href: "/about" },
-    { title: "Blog", icon: <FaBlog />, href: "/blog" },
-    { title: "Contact", icon: <FaEnvelope />, href: "/contact" },
+    { title: "Blog", icon: <BookOpen />, href: "/blog" },
+    { title: "Contact", icon: <FaEnvelope />, href: "mailto:amaojohn767@gmail.com" }, 
     { title: "Projects", icon: <CheckCheck />, href: "/projects" },
     { title: "Resume", icon: <FaFilePdf />, href: "/resume" },
     { title: "Github", icon: <FaGithub />, href: "https://github.com/JOHN-AMAO" },
