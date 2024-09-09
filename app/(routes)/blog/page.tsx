@@ -14,7 +14,7 @@ export default async function BlogPage() {
   const posts = await db.post.findMany({
     where: {
       authorId: "123456789012345678901234",
-      published: true, // Only show published posts
+      
     },
     select: {
       id: true,
