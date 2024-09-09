@@ -83,21 +83,21 @@ const FloatingDockMobile = ({
                   open: { opacity: 1 },
                   closed: { opacity: 0 },
                 }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                className="absolute left-1/2 transform -translate-x-1/2 bottom-16"
               >
-                <div className="flex flex-wrap justify-center items-center w-64 h-64">
+                <div className="flex justify-center items-center">
                   {items.map((item, index) => (
                     <motion.div
                       key={item.title}
                       variants={{
                         open: {
                           opacity: 1,
-                          y: 0,
+                          x: 0,
                           transition: { delay: index * 0.05 },
                         },
-                        closed: { opacity: 0, y: 20 },
+                        closed: { opacity: 0, x: -20 },
                       }}
-                      className="m-2"
+                      className="mx-2"
                     >
                       <Link href={item.href}>
                         <motion.div
