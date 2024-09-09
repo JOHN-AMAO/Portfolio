@@ -16,21 +16,24 @@ const Page = () => {
             <h2 className="font-bold text-2xl md:text-3xl text-white mb-4">Bio:</h2>
             <div className="space-y-4 text-sm md:text-base">
               <p>
-                I am a builder currently based in Lagos, Nigeria.
-                I&apos;m passionate about building products that solve problems
-                for lots of people ranging from education to commerce.
+                Greetings from Lagos, Nigeria! I&apos;m not just a developer; I&apos;m a digital
+                architect crafting solutions that bridge gaps and empower communities. My code
+                isn&apos;t just syntax; it&apos;s a blueprint for change, touching lives from
+                bustling marketplaces to virtual classrooms.
               </p>
               <p className="leading-relaxed">
-                I love developing intuitive user interfaces, optimizing backend
-                systems, or deploying scalable solutions, I enjoy every aspect of
-                the development process.
+                In the realm of tech, I&apos;m a polyglot fluent in the languages of both front-end
+                finesse and back-end robustness. Whether I&apos;m choreographing pixels for seamless
+                UX or orchestrating databases for lightning-fast queries, each line of code is a
+                brushstroke in my digital masterpiece.
               </p>
               <p className="leading-relaxed">
-                Outside of coding, you can find me exploring new technologies,
-                attending tech meetups, or brainstorming new project ideas. I
-                believe that continuous learning and collaboration are essential
-                in the fast-paced world of technology, and I&apos;m always eager
-                to learn and grow alongside like-minded individuals.
+                Beyond the screen, I&apos;m an insatiable learner and a community catalyst. You might
+                find me deep-diving into emerging tech trends, sparking discussions at local tech
+                meetups, or mentoring aspiring coders. I believe in the power of collective growth,
+                where every shared idea can ignite the next big innovation. In this ever-evolving
+                digital landscape, I&apos;m not just keeping pace; I&apos;m helping set the rhythm for
+                the future of African tech.
               </p>
             </div>
           </div>
