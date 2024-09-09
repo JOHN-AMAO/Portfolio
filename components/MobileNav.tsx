@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -8,91 +8,44 @@ const MobileNav = () => {
   const pathname = usePathname();
   const [activeLink, setActiveLink] = useState(pathname);
 
+  useEffect(() => {
+    setActiveLink(pathname);
+  }, [pathname]);
+
+  const links = [
+    { href: '/', icon: '/home.svg', alt: 'home page' },
+    { href: '/about', icon: '/about.svg', alt: 'about page' },
+    { href: '/projects', icon: '/projects.svg', alt: 'projects page' },
+    { href: '/blog', icon: '/blog.svg', alt: 'blog page' },
+    { href: '/resume', icon: '/resume.svg', alt: 'resume page' },
+  ];
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === href;
+    }
+    return pathname.startsWith(href);
+  };
+
   return (
-    <div>
-      <div className='md:hidden fixed bottom-0 left-0 right-0 shadow-md bg-white backdrop-filter backdrop-blur-xl bg-opacity-10 '>
-        <div className='flex flex-row justify-evenly w-full ml-5 mb-5 pt-2'>
+    <div className='md:hidden fixed bottom-0 left-0 right-0 shadow-md bg-white backdrop-filter backdrop-blur-xl bg-opacity-10'>
+      <div className='flex flex-row justify-evenly w-full ml-5 mb-5 pt-2'>
+        {links.map((link) => (
           <Link
-            href='/'
-            className={
-              activeLink === "/"
-                ? "flex-1 bg-blue-500 rounded p-2"
-                : "flex-1 rounded p-2"
-            }
-            onClick={() => setActiveLink("/")}
+            key={link.href}
+            href={link.href}
+            className={`flex-1 rounded p-2 transition-colors duration-200 ${
+              isActive(link.href) ? "bg-blue-500" : "hover:bg-blue-400/20"
+            }`}
           >
             <Image
-              src='/home.svg'
-              alt='home page'
+              src={link.icon}
+              alt={link.alt}
               width={20}
               height={20}
             />
           </Link>
-          <Link
-            href='/about'
-            className={
-              activeLink === "/about"
-                ? "flex-1 bg-blue-500 rounded p-2"
-                : "flex-1 rounded p-2"
-            }
-            onClick={() => setActiveLink("/about")}
-          >
-            <Image
-              src='/about.svg'
-              alt='about page'
-              width={20}
-              height={20}
-            />
-          </Link>
-          <Link
-            href='/projects'
-            className={
-              activeLink === "/projects"
-                ? "flex-1 bg-blue-500 rounded p-2"
-                : "flex-1 rounded p-2"
-            }
-            onClick={() => setActiveLink("/projects")}
-          >
-            <Image
-              src='/projects.svg'
-              alt='projects page'
-              width={20}
-              height={20}
-            />
-          </Link>
-          <Link
-            href='/blog'
-            className={
-              activeLink === "/blog"
-                ? "flex-1 bg-blue-500 rounded p-2"
-                : "flex-1 rounded p-2"
-            }
-            onClick={() => setActiveLink("/blog")}
-          >
-            <Image
-              src='/blog.svg'
-              alt='blog page'
-              width={20}
-              height={20}
-            />
-          </Link>
-          <Link
-            href='/resume'
-            className={
-              activeLink === "/resume"
-                ? "flex-1 bg-blue-500 rounded p-2"
-                : "flex-1 rounded p-2"
-            }
-            onClick={() => setActiveLink("/resume")}
-          >
-            <Image
-              src='/resume.svg'
-              alt='resume page'
-              width={20}
-              height={20}
-            />
-          </Link>
-        </div>
+        ))}
       </div>
     </div>
   );

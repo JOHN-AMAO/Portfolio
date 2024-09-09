@@ -20,7 +20,6 @@ export default async function BlogPage() {
       id: true,
       title: true,
       createdAt: true,
-      
     },
     orderBy: {
       createdAt: "desc",
