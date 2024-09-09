@@ -50,17 +50,17 @@ const Page = () => {
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20 text-white">
-    <div className="max-w-6xl mx-auto bg-[#1a2547] rounded-lg p-8 md:p-12 shadow-xl">
-      <div className="flex flex-col md:flex-row items-center mb-12">
-        <div className="w-48 h-48 md:w-64 md:h-64 relative mb-6 md:mb-0 md:mr-12">
-          <Image
-            src="/myimage.png"
-            alt="John Amao"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-full"
-          />
-        </div>
+      <div className="max-w-6xl mx-auto bg-[#1a2547] rounded-lg p-8 md:p-12 shadow-xl">
+        <div className="flex flex-col md:flex-row items-center mb-12">
+          <div className="w-48 h-48 md:w-64 md:h-64 relative mb-6 md:mb-0 md:mr-12">
+            <Image
+              src="/myimage.png"
+              alt="John Amao"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-full"
+            />
+          </div>
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold mb-3">
               John Amao
@@ -69,9 +69,7 @@ const Page = () => {
               Full Stack Developer
             </h2>
             <p className="text-lg mb-4">
-              With over 2 years of experience in building robust and scalable web applications,
-               I have used, mastered and experimented with different technologies and frameworks over the years.
-               I am a quick learner and a team player, with a passion for building scalable and secure web applications.
+              Passionate developer with over 2 years of experience in building robust and scalable web applications.
             </p>
             <div className="flex space-x-6">
               <a href="mailto:amaojohn767@gmail.com" className="text-white hover:text-indigo-400 transition-colors">
@@ -84,6 +82,7 @@ const Page = () => {
                 <FaGithub className="text-2xl" />
               </a>
             </div>
+
           </div>
         </div>
 
