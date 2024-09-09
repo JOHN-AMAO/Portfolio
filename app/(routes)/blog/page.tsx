@@ -52,7 +52,7 @@ export default async function BlogPage() {
                 <EmptyPlaceholder.Icon name="post" />
                 <EmptyPlaceholder.Title>No posts yet</EmptyPlaceholder.Title>
                 <EmptyPlaceholder.Description>
-                  Stay tuned! I'm working on creating amazing content for you.
+                  Stay tuned! I&lsquo;m working on creating amazing content for you.
                 </EmptyPlaceholder.Description>
               </EmptyPlaceholder>
             )}
