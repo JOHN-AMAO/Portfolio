@@ -1,61 +1,64 @@
 import { db } from "@/lib/db";
-
 import { EmptyPlaceholder } from "@/components/empty-placeholder";
 import { DashboardHeader } from "@/components/header";
 import { DashboardShell } from "@/components/shell";
 import { PostItemRead } from "@/components/post-item-read";
+import { FaRss } from "react-icons/fa";
 
 export const metadata = {
-  title: "Dashboard",
+  title: "Blog",
+  description: "My Ideas, learnings and opinions.",
 };
 
 export default async function BlogPage() {
   const posts = await db.post.findMany({
     where: {
       authorId: "123456789012345678901234",
+      published: true, // Only show published posts
     },
     select: {
       id: true,
       title: true,
-      //published: true,
       createdAt: true,
+      
     },
     orderBy: {
-      updatedAt: "desc",
+      createdAt: "desc",
     },
   });
 
   return (
-    <div className='flex justify-center h-screen md:ml-20 md:mt-10 mt-5'>
-      <DashboardShell>
-        <div className='flex'>
+    <div className="min-h-screen lg:ml-24 text-white">
+      <div className="container mx-auto px-4 py-12 md:py-20">
+        <DashboardShell>
           <DashboardHeader
-            heading='Blog'
-            text='My Ideas, learnings and opinions.'
+            heading="Blog"
+            text="My Ideas, learnings and opinions."
+            
           />
-        </div>
-        <div className='text-white flex flex-col gap-2'>
-          <div></div>
-          {posts?.length ? (
-            <div className='divide-y divide-border rounded-md border m-6'>
-              {posts.map((post) => (
-                <PostItemRead
-                  key={post.id}
-                  post={post}
-                />
-              ))}
-            </div>
-          ) : (
-            <EmptyPlaceholder>
-              <EmptyPlaceholder.Icon name='post' />
-              <EmptyPlaceholder.Title>No posts created</EmptyPlaceholder.Title>
-              <EmptyPlaceholder.Description>
-                You don&apos;t have any posts yet. Start creating content.
-              </EmptyPlaceholder.Description>
-            </EmptyPlaceholder>
-          )}
-        </div>
-      </DashboardShell>
+          <div className="mt-8">
+            {posts?.length ? (
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {posts.map((post) => (
+                  <PostItemRead
+                    key={post.id}
+                    post={post}
+                    className="bg-[#1a2547] rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105"
+                  />
+                ))}
+              </div>
+            ) : (
+              <EmptyPlaceholder>
+                <EmptyPlaceholder.Icon name="post" />
+                <EmptyPlaceholder.Title>No posts yet</EmptyPlaceholder.Title>
+                <EmptyPlaceholder.Description>
+                  Stay tuned! I'm working on creating amazing content for you.
+                </EmptyPlaceholder.Description>
+              </EmptyPlaceholder>
+            )}
+          </div>
+        </DashboardShell>
+      </div>
     </div>
   );
 }

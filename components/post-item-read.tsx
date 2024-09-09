@@ -12,10 +12,9 @@ interface PostItemProps {
 // interface PostItemProps {
 //   post: Pick<Post, "id" | "title" | "published" | "createdAt">;
 // }
-
-export function PostItemRead({ post }: PostItemProps) {
+export function PostItemRead({ post, className }: PostItemProps & { className?: string }) {
   return (
-    <div className='flex items-center justify-between p-4 '>
+    <div className={`flex items-center justify-between p-4 ${className || ''}`}>
       <div className='grid gap-1 w-full'>
         <Link
           href={`/blog/${post.id}`}
