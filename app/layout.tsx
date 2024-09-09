@@ -5,12 +5,13 @@ import DesktopSidebar from "@/components/DesktopSidebar";
 import MobileNav from "@/components/MobileNav";
 import { Analytics } from "@vercel/analytics/react";
 import LeftSideBar from "@/components/LeftSideBar";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "John Amao || AJy",
-  description: "Explore John Amao's portfolio, blog, and projects. Full-stack developer passionate about web technologies and innovation.",
+  description: "This is the official website of John Amao.",
   icons: "./favicon.ico",
   twitter: {
     card: "summary_large_image",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     description: "Explore John Amao's portfolio, blog, and projects. Full-stack developer passionate about web technologies and innovation.",
     images: "/my-image.png", // Replace with your actual OG image URL
     site: "@johnamao4",
-    creator: "@johnamao4", 
+    creator: "@johnamao4", // Use 'creator' instead of 'handle'
   },
 };
 
