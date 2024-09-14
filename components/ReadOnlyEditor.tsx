@@ -41,7 +41,13 @@ export function ReadOnlyEditor({ post }) {
         readOnly: "true",
         data: body.content,
         tools: {
-          header: Header,
+          header: {
+            class: Header,
+            config: {
+              levels: [1, 2, 3, 4, 5, 6],
+              defaultLevel: 3
+            }
+          },
           linkTool: LinkTool,
           list: List,
           code: Code,

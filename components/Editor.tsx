@@ -13,6 +13,7 @@ import { toast } from "@/components/ui/use-toast";
 import { Icons } from "@/components/icons";
 import { uploadFiles } from "@/lib/uploadthing";
 import { Post } from "@prisma/client";
+import { Embed } from '@editorjs/embed';
 
 export function Editor({ post }) {
   const { register, handleSubmit } = useForm();
@@ -44,7 +45,13 @@ export function Editor({ post }) {
         inlineToolbar: true,
         data: body.content,
         tools: {
-          header: Header,
+          header: {
+            class: Header,
+            config: {
+              levels: [1, 2, 3, 4, 5, 6],
+              defaultLevel: 3
+            }
+          },
           linkTool: {
             class: LinkTool,
             config: {
@@ -55,7 +62,17 @@ export function Editor({ post }) {
           code: Code,
           inlineCode: InlineCode,
           table: Table,
-          embed: Embed,
+          embed: {
+            class: Embed,
+            config: {
+              services: {
+                youtube: true,
+                coub: true,
+                // ... other services you want to support
+              },
+              placeholder: '<div class="embed-tool__placeholder">Loading embed...</div>'
+            }
+          },
           image: {
             class: ImageTool,
             config: {

@@ -59,3 +59,292 @@
 .dark .cdx-notify__cross::before {
   background: white;
 }
+
+/* Editor.js heading styles */
+.ce-block__content h1,
+.ce-block__content h2,
+.ce-block__content h3,
+.ce-block__content h4,
+.ce-block__content h5,
+.ce-block__content h6 {
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.ce-block__content h1 {
+  font-size: 2.5em;
+}
+
+.ce-block__content h2 {
+  font-size: 2em;
+}
+
+.ce-block__content h3 {
+  font-size: 1.75em;
+}
+
+.ce-block__content h4 {
+  font-size: 1.5em;
+}
+
+.ce-block__content h5 {
+  font-size: 1.25em;
+}
+
+.ce-block__content h6 {
+  font-size: 1em;
+}
+
+/* Inline toolbar styles */
+.ce-inline-toolbar {
+  background-color: theme("colors.gray.800");
+  border: 1px solid theme("colors.gray.600");
+  border-radius: 6px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ce-inline-toolbar__buttons {
+  padding: 4px;
+}
+
+.ce-inline-tool {
+  color: theme("colors.gray.200");
+  border-radius: 4px;
+  padding: 6px;
+}
+
+.ce-inline-tool:hover,
+.ce-inline-tool--active {
+  background-color: theme("colors.blue.600");
+  color: theme("colors.white");
+}
+
+.ce-inline-toolbar__dropdown {
+  background-color: theme("colors.gray.800");
+  border-color: theme("colors.gray.600");
+}
+
+.ce-inline-toolbar__dropdown:hover {
+  background-color: theme("colors.blue.600");
+}
+
+.ce-conversion-toolbar {
+  background-color: theme("colors.gray.800");
+  border: 1px solid theme("colors.gray.700");
+  border-radius: 6px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ce-conversion-tool {
+  color: theme("colors.gray.300");
+}
+
+.ce-conversion-tool:hover {
+  background-color: theme("colors.gray.700");
+  color: theme("colors.white");
+}
+
+/* Text selection color */
+.ce-block__content ::selection {
+  background-color: theme("colors.blue.700"); /* Darker blue for selection */
+  color: theme("colors.white");
+}
+
+/* Global selection color */
+::selection {
+  background-color: theme("colors.blue.800");
+  color: theme("colors.white");
+}
+
+/* Editor.js specific selection color */
+.codex-editor ::selection,
+.ce-block ::selection,
+.cdx-block ::selection {
+  background-color: theme("colors.blue.800");
+  color: theme("colors.white");
+}
+
+/* Image tool styles */
+.image-tool {
+  --bg-color: transparent;
+  --border-color: transparent;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.image-tool__image {
+  border-radius: 0;
+  overflow: visible;
+}
+
+.image-tool__caption {
+  border: none;
+  padding: 0;
+  margin-top: 0.5em;
+  text-align: center;
+  font-style: italic;
+  color: theme("colors.gray.400");
+}
+
+/* Table spacing */
+.tc-table {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Code block spacing */
+.ce-code {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Quote block spacing */
+.cdx-quote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  border-left: 4px solid theme("colors.gray.300");
+}
+
+/* Delimiter spacing */
+.ce-delimiter {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* Embed styles */
+.ce-block--embed {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.embed-tool {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.embed-tool__caption {
+  margin-top: 0.5em;
+  text-align: center;
+  font-style: italic;
+  color: theme("colors.gray.400");
+}
+
+.embed-tool iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive embed sizes */
+@media (min-width: 640px) {
+  .embed-tool {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .embed-tool {
+    width: 80%;
+  }
+}
+
+/* ... rest of the existing styles ... */
+
+/* Embed placeholder */
+.embed-tool__placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: theme("colors.gray.800");
+  color: theme("colors.gray.300");
+  font-style: italic;
+}
+
+/* Link styles */
+.ce-block__content a,
+.cdx-block a {
+  color: theme("colors.blue.400");
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.ce-block__content a:hover,
+.cdx-block a:hover {
+  color: theme("colors.blue.300");
+  border-bottom-color: theme("colors.blue.300");
+}
+
+/* Link tool styles */
+.link-tool {
+  margin: 1.5em 0; /* Changed from 'margin: 1.5em auto;' */
+  border: 1px solid theme("colors.gray.700");
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  background-color: theme("colors.gray.900");
+  max-width: 500px; /* Limit the maximum width */
+  width: 100%; /* Changed from 'width: 90%;' to take full width up to max-width */
+}
+
+.link-tool:hover {
+  border-color: theme("colors.blue.500");
+}
+
+.link-tool__content {
+  padding: 0.75em;
+  background-color: theme("colors.gray.800");
+}
+
+.link-tool__title {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.25em;
+  color: theme("colors.gray.100");
+}
+
+.link-tool__description {
+  font-size: 0.8em;
+  color: theme("colors.gray.300");
+  margin-bottom: 0.25em;
+}
+
+.link-tool__anchor {
+  font-size: 0.7em;
+  color: theme("colors.blue.400");
+}
+
+.link-tool__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 150px;
+}
+
+/* Override any white backgrounds that might be set by the link tool */
+.link-tool .link-tool__content,
+.link-tool .link-tool__image-preloader {
+  background-color: theme("colors.gray.800") !important;
+}
+
+/* ... rest of the existing styles ... */
+
