@@ -109,34 +109,31 @@ export function ReadOnlyEditor({ post }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='grid w-full gap-10 text-white'>
+    <form onSubmit={handleSubmit(onSubmit)} className="px-4 sm:px-0">
+      <div className='grid w-full gap-6 sm:gap-10 text-white'>
         <div className='flex w-full items-center justify-between'>
-          <div className='flex items-center space-x-10'>
+          <div className='flex items-center space-x-4 sm:space-x-10'>
             <Link
               href='/blog'
-              className={cn(buttonVariants({ variant: "ghost" }))}
+              className={cn(buttonVariants({ variant: "ghost" }), "text-sm sm:text-base")}
             >
               <>
-                <Icons.chevronLeft className='mr-2 h-4 w-4' />
+                <Icons.chevronLeft className='mr-2 h-3 w-3 sm:h-4 sm:w-4' />
                 Back
               </>
             </Link>
-            {/* <p className='text-sm text-muted-foreground'>
-              {post.published ? "Published" : "Draft"}
-            </p> */}
           </div>
         </div>
-        <div className='prose prose-stone mx-auto w-full md:w-[800px] dark:prose-invert'>
+        <div className='prose prose-stone mx-auto w-full max-w-full sm:max-w-[800px] dark:prose-invert'>
           <h1
             id='title'
-            className='w-full resize-none appearance-none overflow-hidden bg-transparent text-5xl font-bold focus:outline-none'
+            className='w-full resize-none appearance-none overflow-hidden bg-transparent text-3xl sm:text-5xl font-bold focus:outline-none'
           >
             {post.title}
           </h1>
           <div
             id='editor'
-            className='min-h-[500px]'
+            className='min-h-[300px] sm:min-h-[500px]'
           />
         </div>
       </div>

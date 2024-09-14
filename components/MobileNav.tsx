@@ -24,17 +24,17 @@ const MobileNav = () => {
     if (href === '/') {
       return pathname === href;
     }
-    return pathname.startsWith(href);
+    return pathname?.startsWith(href) ?? false;
   };
 
   return (
     <div className='md:hidden fixed bottom-0 left-0 right-0 shadow-md bg-white backdrop-filter backdrop-blur-xl bg-opacity-10'>
-      <div className='flex flex-row justify-evenly w-full ml-5 mb-5 pt-2'>
+      <div className='flex flex-row justify-evenly w-full py-2'>
         {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className={`flex-1 rounded p-2 transition-colors duration-200 ${
+            className={`flex items-center justify-center rounded p-2 transition-colors duration-200 ${
               isActive(link.href) ? "bg-blue-500" : "hover:bg-blue-400/20"
             }`}
           >
