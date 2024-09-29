@@ -32,9 +32,9 @@ const Page = () => {
                   <h3 className="text-xl font-semibold mb-2 text-white">About Me</h3>
                   <p className="text-white text-lg ">
                    
-                  I'm John, a passionate fullstack developer based in Nigeria 📍 . With 3 years of experience in programming, I've dedicated my time to building digital solutions to problems.
+                  I&apos;m John, a passionate fullstack developer based in Nigeria 📍 . With 3 years of experience in programming, I&apos;ve dedicated my time to building digital solutions to problems.
                   <br />
-                  When I'm not coding, you can find me reading about new technology and philosophy, or watching random YouTube videos. I'm always eager to explore and
+                  When I&apos;m not coding, you can find me reading about new technology and philosophy, or watching random YouTube videos. I&apos;m always eager to explore and
                    collaborate on new technologies and ideas, and <Link href="mailto:amaojohn767@gmail.com" className="text-blue-500">connect </Link> with like-minded professionals. 
 
                   </p>
