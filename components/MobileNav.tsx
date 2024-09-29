@@ -35,7 +35,7 @@ const MobileNav = () => {
   }
 
   return (
-    <div className='md:hidden fixed bottom-0 left-0 right-0 shadow-md bg-white backdrop-filter backdrop-blur-xl bg-opacity-10'>
+    <div className='md:hidden fixed bottom-0 left-0 right-0 shadow-md bg-white z-50 backdrop-filter backdrop-blur-xl bg-opacity-10'>
       <div className='flex flex-row justify-evenly w-full py-2'>
         {links.map((link) => (
           <Link
