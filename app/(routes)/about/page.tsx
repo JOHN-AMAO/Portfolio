@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Page = () => {
   return (
@@ -28,9 +29,14 @@ const Page = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-2xl transform rotate-3 -z-10 group-hover:rotate-6 transition-transform duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-400 rounded-2xl transform rotate-2 -z-20 group-hover:rotate-4 transition-transform duration-300"></div>
                 <div className="bg-[#1a2547] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative z-10 group-hover:translate-x-2 group-hover:-translate-y-2">
-                  <h3 className="text-xl font-semibold mb-2 text-white">The Developer</h3>
-                  <p className="text-white text-sm md:text-base">
-                    Welcome to my digital realm! I&apos;m a 19-year-old full stack developer from Nigeria, passionate about crafting everything from simple art to complex enterprise-level applications. My playground? The vast landscape of the internet, where I constantly learn and build.
+                  <h3 className="text-xl font-semibold mb-2 text-white">About Me</h3>
+                  <p className="text-white text-lg ">
+                   
+                  I'm John, a passionate fullstack developer based in Nigeria 📍 . With 3 years of experience in programming, I've dedicated my time to building digital solutions to problems.
+                  <br />
+                  When I'm not coding, you can find me reading about new technology and philosophy, or watching random YouTube videos. I'm always eager to explore and
+                   collaborate on new technologies and ideas, and <Link href="mailto:amaojohn767@gmail.com" className="text-blue-500">connect </Link> with like-minded professionals. 
+
                   </p>
                 </div>
               </motion.div>
@@ -45,10 +51,14 @@ const Page = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-500 rounded-2xl transform rotate-3 -z-10 group-hover:rotate-6 transition-transform duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-400 rounded-2xl transform rotate-2 -z-20 group-hover:rotate-4 transition-transform duration-300"></div>
                 <div className="bg-[#1a2547] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative z-10 group-hover:translate-x-2 group-hover:-translate-y-2">
-                  <h3 className="text-xl font-semibold mb-2 text-white">The Tech Enthusiast</h3>
-                  <p className="text-white text-sm md:text-base">
-                    In the realm of technology, I&apos;m fluent in multiple programming languages. My toolkit is diverse, allowing me to approach problems from various angles and create robust, efficient solutions. I thrive on the challenge of mastering new technologies and applying them creatively.
-                  </p>
+                  <h3 className="text-xl font-semibold mb-2 text-white">Interests 🌟</h3>
+                  <ul className="text-white text-lg  list-disc pl-5">
+                    <li>🎵 Rap music, Afrobeats, Pop music</li>
+                    <li>🤔 Philosophy - absurdism, stoicism, nihilism</li>
+                    <li>🎮 Gaming</li>
+                    <li>🎻 Watching movies, stand-up comedy</li>
+                    <li>📚 Reading</li>
+                  </ul>
                 </div>
               </motion.div>
 
@@ -62,9 +72,20 @@ const Page = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl transform rotate-3 -z-10 group-hover:rotate-6 transition-transform duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl transform rotate-2 -z-20 group-hover:rotate-4 transition-transform duration-300"></div>
                 <div className="bg-[#1a2547] rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 relative z-10 group-hover:translate-x-2 group-hover:-translate-y-2">
-                  <h3 className="text-xl font-semibold mb-2 text-white">The Lifelong Learner</h3>
-                  <p className="text-white text-sm md:text-base">
-                    Beyond the screen, I&apos;m an insatiable learner. You might find me immersed in a game, exploring philosophical concepts on YouTube, or mentoring aspiring coders. I firmly believe in the power of collective growth, where every shared idea has the potential to spark the next big innovation.
+                  <h3 className="text-xl font-semibold mb-2 text-white">Soft Skills</h3>
+                  <p className="text-white text-lg">
+                    <ul className="list-disc pl-5">
+                      <li>Problem-solving</li>
+                      <li> Leadership</li>
+                      <li>Critical thinking</li>
+                      <li>Attention to detail</li>
+                      <li> Time management</li>
+                      <li> Teamwork</li>
+                      <li> Communication</li>
+                      <li> Creativity</li>
+                      <li> Adaptability</li>
+                     
+                    </ul>
                   </p>
                 </div>
               </motion.div>
