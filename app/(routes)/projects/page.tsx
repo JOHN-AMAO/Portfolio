@@ -22,6 +22,21 @@ const Page = () => {
         </p>
       </div>
       <div className=' md:grid md:grid-cols-3 flex flex-col gap-4  mx-4 mb-60'>
+      <Link href='https://looplearn.app'>
+          <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg '>
+            <div className='flex flex-row justify-between m-2 '>
+              <h1 className='text-xl'>looplearn</h1>
+              <p className='border border-gray-800 p-1 rounded-lg bg-green-400'>
+                Startup
+              </p>
+            </div>
+            <p>
+              Looplearn is a skill developement learning infrastructre designed for college students
+               to learn in-demand skills and earn cerfications, with courses ranging from web development
+              to digital marketing
+            </p>
+          </div>
+        </Link>
         <Link href='https://youtu.be/fkluyMvBKTs'>
           <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg '>
             <div className='flex flex-row justify-between m-2 '>
