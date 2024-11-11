@@ -5,19 +5,18 @@ const Page = () => {
   return (
     <div className='flex flex-col gap-6 justify-center text-white items-center md:ml-20'>
       <div className=' flex flex-col w-3/4 py-5'>
-        <h1 className='text-xl md:text-4xl mt-5 mb-5'>Projects.</h1>
+        <h1 className='text-xl md:text-4xl mt-5 mb-5'>Works.</h1>
         <h1 className='text-lg md:text-4xl mb-4 p-4 rounded font-serif font-extrabold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 '>
-          Major Projects I&apos;ve worked on:
+          Some of my works
         </h1>
         <p className='font-bold text-gray-500'>
-          Here are the major projects I have worked on, some still under
-          developement, smaller projects can be found on{" "}
+          Here are some of my works
           <Link
             className='text-blue-500'
             href='https://github.com/JOHN-AMAO'
           >
             {" "}
-            my github page
+            Github
           </Link>
         </p>
       </div>
@@ -31,9 +30,9 @@ const Page = () => {
               </p>
             </div>
             <p>
-              Looplearn is a skill developement learning infrastructre designed for college students
-               to learn in-demand skills and earn cerfications, with courses ranging from web development
-              to digital marketing
+              looplearn is a talent factory and pipeline built to enable
+              universities to train their students in in-demand skills and get
+              them employed at scale
             </p>
           </div>
         </Link>
