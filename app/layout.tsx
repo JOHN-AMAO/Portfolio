@@ -30,8 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${inter.className}  m-5 bg-[#0e1631] mb-5`}>
-        <div className='flex flex-row '>
+      <body className={`${inter.className} bg-[#0a0f24]`}>
+        <div className='flex flex-row min-h-screen'>
           <DesktopSidebar />
           {children}
           <Analytics />
