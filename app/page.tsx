@@ -97,7 +97,7 @@ export default function Home() {
               variants={fadeIn}
               className="text-white text-5xl md:text-6xl font-bold tracking-tight leading-tight"
             >
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="relative">
                 <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text relative z-10">
                   John Amao
