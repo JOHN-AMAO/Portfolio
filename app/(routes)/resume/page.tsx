@@ -18,24 +18,9 @@ const SkillCategory = ({ title, icon, skills }: { title: string, icon: React.Rea
   </div>
 );
 
-const ExperienceCard = ({ title, company, date, responsibilities }: { title: string, company: string, date: string, responsibilities: string[] }) => (
-  <div className="bg-[#1a2547] rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl mb-6">
-    <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-    <p className="text-indigo-400 mb-4">{company} | {date}</p>
-    <ul className="list-disc list-inside space-y-2">
-      {responsibilities.map((responsibility, index) => (
-        <li key={index}>{responsibility}</li>
-      ))}
-    </ul>
-  </div>
-);
 
-const EducationCard = ({ degree, institution, date }: { degree: string, institution: string, date: string }) => (
-  <div className="bg-[#1a2547] rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
-    <h3 className="text-2xl font-semibold mb-2">{degree}</h3>
-    <p className="text-indigo-400">{institution} | {date}</p>
-  </div>
-);
+
+
 
 const Page = () => {
   const languages = ["Python", "TypeScript", "JavaScript", "HTML", "CSS", "SQL"];
@@ -50,7 +35,13 @@ const Page = () => {
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20 text-white">
-      <div className="max-w-6xl mx-auto bg-[#1a2547] rounded-lg p-8 md:p-12 shadow-xl">
+            <div
+            className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl transition-all duration-500 hover:border-indigo-500/30 group flex-1 relative overflow-hidden"
+       >
+            {/* Decorative elements */}
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-indigo-500/20 rounded-full blur-xl  opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl  opacity-100 transition-opacity duration-700"></div>
+      <div className="max-w-6xl mx-auto rounded-lg p-8 md:p-12 shadow-xl">
         <div className="flex flex-col md:flex-row items-center mb-12">
           <div className="w-48 h-48 md:w-64 md:h-64 relative mb-6 md:mb-0 md:mr-12">
             <Image
@@ -82,7 +73,7 @@ const Page = () => {
                 <FaGithub className="text-2xl" />
               </a>
             </div>
-
+            
           </div>
         </div>
 
@@ -105,37 +96,9 @@ const Page = () => {
           </div>
         </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">Professional Experience</h2>
-          <ExperienceCard 
-            title="Full Stack Developer"
-            company="Building my Ideas"
-            date="2023 - Present"
-            responsibilities={[
-              "Conducting extensive market research and user interviews to identify pain points and opportunities in various industries",
-              "Designing and developing multiple full-stack applications from concept to deployment, utilizing technologies such as Next.js, Node.js, and MongoDB",
-              "Integrating AI capabilities into web applications to significantly improve functionality"
-            ]}
-          />
-          <ExperienceCard 
-            title="Frontend Developer"
-            company="SkyFig technologies"
-            date="May 2022 - August 2022"
-            responsibilities={[
-              "Developed responsive web applications using HTML, CSS, and JavaScript",
-              "In charge of onboarding and training interns and junior developers"
-            ]}
-          />
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-bold mb-6">Education</h2>
-          <EducationCard 
-            degree="Bachelor of Science in Computer Science (in view)"
-            institution="University of Lagos"
-            date="2023 - 2027"
-          />
-        </section>
+        </div>
+        
+       
       </div>
     </div>
   );

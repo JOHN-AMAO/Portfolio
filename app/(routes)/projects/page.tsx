@@ -51,50 +51,12 @@ const Page = () => {
             </p>
           </div>
         </Link>
-        <Link href='https://xhangout.vercel.app/'>
-          <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg '>
-            <div className='flex flex-row justify-between m-2 '>
-              <h1 className='text-xl'>xHangout</h1>
-              <p className='border border-gray-800 p-1 rounded-lg bg-green-400'>
-                Open Source Project
-              </p>
-            </div>
-            <p>
-              xHangout is a Social Network developed for GenZ college students
-              looking for an exclusive but open community of students with the
-              same interest
-            </p>
-          </div>
-        </Link>
+      
         <Link href='https://spectrum-finance.vercel.app/'>
-          <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg'>
-            <div className='flex flex-row justify-between m-2 '>
-              <h1 className='text-xl'>Spectrum finance</h1>
-              <p className='border border-gray-800 p-1 rounded-lg bg-green-400'>
-                Open Source
-              </p>
-            </div>
-            <p>
-              Spectrum finance is an app built for users to be able to make
-              transactions, expense tracking and seamless financial management,
-              powered by the chimoney api
-            </p>
-          </div>
+         
         </Link>
 
-        <div className='flex flex-col p-4 bg-[#142149] rotate-2 hover:rotate-0 rounded-lg '>
-          <div className='flex flex-row justify-between m-2'>
-            <h1 className='text-xl'>LaunchPad</h1>
-            <p className='border border-gray-800 p-1 rounded-lg bg-green-600'>
-              Private Project
-            </p>
-          </div>
-          <p>
-            LaunchPad is a Edtech platform built to help learners kickstart
-            their career regardless of their level of expertise, with classes
-            ranging from web developement to robotics, LaunchPad has it all
-          </p>
-        </div>
+      
         <Link href='https://skill-sphere.vercel.app/'>
           <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg'>
             <div className='flex flex-row justify-between m-2'>
@@ -125,31 +87,7 @@ const Page = () => {
             </p>
           </div>
         </Link>
-        <Link href='https://github.com/JOHN-AMAO'>
-          <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg'>
-            <div className='flex flex-row justify-between m-2 '>
-              <h1 className='text-xl'>Django Microservice</h1>
-              <p className='border border-gray-800 p-1 rounded-lg bg-green-400'>
-                Open Source
-              </p>
-            </div>
-            <p>A Backend Microservice built using the Django REST framework</p>
-          </div>
-        </Link>
-        <Link href='https://github.com/JOHN-AMAO'>
-          <div className='flex flex-col p-4 bg-[#142149] rotate-1 hover:rotate-0 rounded-lg'>
-            <div className='flex flex-row justify-between m-2 '>
-              <h1 className='text-xl'>Express Microservice</h1>
-              <p className='border border-gray-800 p-1 rounded-lg bg-green-400'>
-                Open Source
-              </p>
-            </div>
-            <p>
-              An Express REST api bult to demonstrate my ability to build
-              scalable backend Microservices
-            </p>
-          </div>
-        </Link>
+      
       </div>
     </div>
   );
