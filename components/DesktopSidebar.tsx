@@ -34,20 +34,7 @@ const DesktopSidebar = () => {
      
       <div className="relative ml-[20px] mt-6">
         
-        <motion.div 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="relative"
-        >
-          <Image
-            className='relative z-10 transition-transform duration-300 hover:scale-110'
-            src='/logo.svg'
-            width={50}
-            height={50}
-            alt='my logo'
-          />
-        </motion.div>
+       
       </div>
 
       <div className='flex flex-col gap-4 justify-center h-screen ml-5'>

@@ -31,7 +31,6 @@ export const FloatingDock = ({
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} onOpenChange={onOpenChange} />
     </>
   );
 };
@@ -52,7 +51,7 @@ const FloatingDockMobile = ({
   }, [open, onOpenChange]);
 
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("block md:hidden ", className)}>
       <div className="flex items-center justify-center">
         <motion.div
           animate={open ? "open" : "closed"}
@@ -85,7 +84,7 @@ const FloatingDockMobile = ({
                 }}
                 className="absolute left-1/2 transform -translate-x-1/2 bottom-16"
               >
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center w-fit">
                   {items.map((item, index) => (
                     <motion.div
                       key={item.title}
@@ -134,7 +133,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
+        "hidden md:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3 w-fit",
         className
       )}
     >

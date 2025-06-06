@@ -83,7 +83,7 @@ export default function Home() {
             <motion.div 
               custom={0} 
               variants={fadeIn} 
-              className="inline-flex items-center px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm backdrop-blur-sm"
+              className="inline-flex w-fit items-center px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm backdrop-blur-sm"
             >
               <span className="relative flex h-2 w-2 mr-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
@@ -95,7 +95,7 @@ export default function Home() {
             <motion.h1 
               custom={1} 
               variants={fadeIn}
-              className="text-white text-5xl md:text-6xl font-bold tracking-tight leading-tight"
+              className="text-white text-3xl md:text-4xl font-bold tracking-tight leading-tight"
             >
               Hi, I&apos;m{" "}
               <span className="relative">
@@ -138,18 +138,11 @@ export default function Home() {
               </div>
             </motion.div>
             
-            <motion.p 
-              custom={3} 
-              variants={fadeIn}
-              className="text-white/70 text-lg leading-relaxed"
-            >
-              Developer, Reader, Writer, Learner, Thinker
-            </motion.p>
 
             <motion.div 
               custom={4} 
               variants={fadeIn}
-              className="flex gap-4"
+              className="flex gap-4 items-center"
             >
               <Link href="/projects">
                 <Button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 rounded-xl px-8 py-6 text-base font-medium">
@@ -161,7 +154,15 @@ export default function Home() {
                   About Me
                 </Button>
               </Link>
+            
             </motion.div>
+            
+            <FloatingDock 
+                items={socialLinks} 
+                desktopClassName="hidden md:flex bg-gray-900/50 border border-white/10 backdrop-blur-lg z-10 relative shadow-xl"
+                mobileClassName="flex md:hidden bg-gray-900/50 border border-white/10 backdrop-blur-lg z-10 relative shadow-xl"
+                onOpenChange={setIsMobileDockOpen}
+              />
           </div>
           
           {/* Right Column - Image */}
@@ -199,6 +200,10 @@ export default function Home() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-col lg:flex-row gap-16 items-start mx-auto max-w-6xl"
         >
+
+               {/* Right Column - Social Links */}
+        
+
           {/* Left Column - About Card */}
           <div
             className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-8 transition-all duration-500 hover:border-indigo-500/30 group flex-1 relative overflow-hidden"
@@ -247,52 +252,10 @@ export default function Home() {
            
           </div>
           
-          {/* Right Column - Social Links */}
-          <div className="flex-1 flex justify-center items-center h-64">
-            <FloatingDock 
-              items={socialLinks} 
-              desktopClassName="hidden md:flex bg-gray-900/50 border border-white/10 backdrop-blur-lg z-10 relative shadow-xl"
-              mobileClassName="flex md:hidden bg-gray-900/50 border border-white/10 backdrop-blur-lg z-10 relative shadow-xl"
-              onOpenChange={setIsMobileDockOpen}
-            />
-          </div>
+         
         </motion.div>
         
-        {/* Skills Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-32"
-        >
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">
-                Skills & Technologies
-              </span>
-            </h2>
-            <p className="text-white/60 max-w-2xl mx-auto text-lg">
-              The tools and technologies I use to bring ideas to life
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 mx-auto max-w-5xl">
-            {['React', 'TypeScript', 'Node.js', 'Next.js'].map((skill, i) => (
-              <motion.div
-                key={skill}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 * i }}
-                className="bg-gray-900/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 flex flex-col items-center justify-center hover:border-indigo-500/30 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 mb-4 rounded-lg bg-indigo-500/10 flex items-center justify-center group-hover:bg-indigo-500/20 transition-colors duration-300">
-                  <span className="text-2xl text-indigo-400">{skill.charAt(0)}</span>
-                </div>
-                <h3 className="text-white font-medium">{skill}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+      
       </div>
     </main>
   );
