@@ -15,7 +15,7 @@ const Page = () => {
         <h1 className={`text-xl md:text-4xl mt-5 mb-5 ${dancingScript.className}`}>Works.</h1>
        
         <p className='font-bold text-gray-500'>
-          Some cool stuff I've built
+          Some cool stuff I&apos;ve built
          
         </p>
                  <p className="font-bold text-gray-500">To view my open source projects, have a look at my github{" "}

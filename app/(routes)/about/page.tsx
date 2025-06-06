@@ -54,16 +54,16 @@ const Page = () => {
                   </p>
                 </div>
            
-                <h3 className={`text-2xl font-bold mb-4 text-white ${dancingScript.className}`}>What I'm Into 🌟</h3>
+                <h3 className={`text-2xl font-bold mb-4 text-white ${dancingScript.className}`}>What I&apos;m Into 🌟</h3>
                 <div className="text-white text-lg leading-relaxed">
                   <p>
-                    Music is a huge part of my life 🎵 - I'm always vibing to some rap, Afrobeats, or pop music depending on my mood. There's something about a good beat that just gets me in the zone, whether I'm coding or just chilling.
+                    Music is a huge part of my life 🎵 - I&apos;m always vibing to some rap, Afrobeats, or pop music depending on my mood. There&apos;s something about a good beat that just gets me in the zone, whether I&apos;m coding or just chilling.
                   </p>
                   <p className="mt-4">
-                    I'm also pretty deep into philosophy 🤔, especially the darker stuff like absurdism, stoicism, and nihilism. I know, I know, sounds depressing, but there's actually something oddly comforting about contemplating the meaninglessness of existence while building meaningful software.
+                    I&apos;m also pretty deep into philosophy 🤔, especially the darker stuff like absurdism, stoicism, and nihilism. I know, I know, sounds depressing, but there&apos;s actually something oddly comforting about contemplating the meaninglessness of existence while building meaningful software.
                   </p>
                   <p className="mt-4">
-                    When I need to unwind, you'll find me gaming 🎮 or binge-watching movies and stand-up comedy 🎻. There's nothing like a good laugh after debugging code for hours. And yeah, I'm one of those people who actually enjoys reading 📚 - give me a good book and I'm set for the weekend.
+                    When I need to unwind, you&apos;ll find me gaming 🎮 or binge-watching movies and stand-up comedy 🎻. There&apos;s nothing like a good laugh after debugging code for hours. And yeah, I&apos;m one of those people who actually enjoys reading 📚 - give me a good book and I&apos;m set for the weekend.
                   </p>
                 </div>
               </div>
