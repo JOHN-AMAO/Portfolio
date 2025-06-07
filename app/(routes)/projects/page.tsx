@@ -50,7 +50,7 @@ const Page = () => {
             ></div>
             {/* Main card */}
             <div 
-              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 overflow-hidden border border-gray-700/50 hover:border-blue-500/30 relative'
+              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 overflow-hidden border border-gray-700/50 relative'
             >
               <div className='relative w-full h-36 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden'>
                 <Image 
@@ -88,7 +88,7 @@ const Page = () => {
             ></div>
             {/* Main card */}
             <div 
-              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20 hover:scale-105 overflow-hidden border border-gray-700/50 hover:border-purple-500/30 relative'
+              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 overflow-hidden border border-gray-700/50 relative'
             >
               <div className='relative w-full h-36 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden'>
                 <Image 
@@ -127,7 +127,7 @@ const Page = () => {
             ></div>
             {/* Main card */}
             <div 
-              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 hover:scale-105 overflow-hidden border border-gray-700/50 hover:border-green-500/30 relative'
+              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 overflow-hidden border border-gray-700/50 relative'
             >
               <div className='relative w-full h-36 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden'>
                 <Image 
@@ -143,7 +143,7 @@ const Page = () => {
               </div>
               <div className='p-4 relative z-20'>
                 <div className='flex flex-row justify-between items-start mb-3'>
-                  <h1 className='text-lg font-semibold'>Looplearn</h1>
+                  <h1 className='text-lg font-semibold'>looplearn</h1>
                   <span className='px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 border border-green-500/30 backdrop-blur-sm'>
                     Startup
                   </span>
@@ -165,7 +165,7 @@ const Page = () => {
             ></div>
             {/* Main card */}
             <div 
-              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105 overflow-hidden border border-gray-700/50 hover:border-orange-500/30 relative'
+              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 overflow-hidden border border-gray-700/50 relative'
             >
               <div className='relative w-full h-36 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden'>
                 <Image 
@@ -205,7 +205,7 @@ const Page = () => {
             ></div>
             {/* Main card */}
             <div 
-              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 overflow-hidden border border-gray-700/50 hover:border-cyan-500/30 relative'
+              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 overflow-hidden border border-gray-700/50 relative'
             >
               <div className='relative w-full h-36 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden'>
                 <Image 
