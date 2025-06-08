@@ -1,6 +1,7 @@
 import React from "react";
 import { FaCode, FaDatabase, FaTools, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 
 const SkillCategory = ({ title, icon, skills }: { title: string, icon: React.ReactNode, skills: string[] }) => (
   <div className="bg-[#1a2547] rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
@@ -18,10 +19,6 @@ const SkillCategory = ({ title, icon, skills }: { title: string, icon: React.Rea
   </div>
 );
 
-
-
-
-
 const Page = () => {
   const languages = ["Python", "TypeScript", "JavaScript", "HTML", "CSS", "SQL"];
   const frameworks = [
@@ -34,71 +31,113 @@ const Page = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12 md:py-20 text-white">
-            <div
-            className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl transition-all duration-500 hover:border-indigo-500/30 group flex-1 relative overflow-hidden"
-       >
-            {/* Decorative elements */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-indigo-500/20 rounded-full blur-xl  opacity-100 transition-opacity duration-700"></div>
-            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl  opacity-100 transition-opacity duration-700"></div>
-      <div className="max-w-6xl mx-auto rounded-lg p-8 md:p-12 shadow-xl">
-        <div className="flex flex-col md:flex-row items-center mb-12">
-          <div className="w-48 h-48 md:w-64 md:h-64 relative mb-6 md:mb-0 md:mr-12">
-            <Image
-              src="/myimage.png"
-              alt="John Amao"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full"
-            />
-          </div>
-          <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-3">
-              John Amao
-            </h1>
-            <h2 className="text-2xl md:text-3xl font-bold text-indigo-400 mb-4">
-              Full Stack Developer
-            </h2>
-            <p className="text-lg mb-4">
-              Passionate developer with over 2 years of experience in building robust and scalable web applications.
-            </p>
-            <div className="flex space-x-6">
-              <a href="mailto:amaojohn767@gmail.com" className="text-white hover:text-indigo-400 transition-colors">
-                <FaEnvelope className="text-2xl" />
-              </a>
-              <a href="https://linkedin.com/in/john-amao-7352631b7/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors">
-                <FaLinkedin className="text-2xl" />
-              </a>
-              <a href="https://github.com/john-amao" target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors">
-                <FaGithub className="text-2xl" />
-              </a>
+    <div className="container mx-auto px-4 py-12 md:py-20 text-white md:mx-20">
+      <div className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl transition-all duration-500 hover:border-indigo-500/30 group flex-1 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-indigo-500/20 rounded-full blur-xl opacity-100 transition-opacity duration-700"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl opacity-100 transition-opacity duration-700"></div>
+        
+        <div className="max-w-6xl mx-auto rounded-lg p-8 md:p-12 shadow-xl relative z-10">
+          {/* Header Section */}
+          <div className="flex flex-col md:flex-row items-start mb-12 gap-8">
+            {/* Profile Image */}
+            <div className="w-32 h-32 md:w-40 md:h-40 relative flex-shrink-0">
+              <Image
+                src="/myimage.png"
+                alt="John Amao"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full border-4 border-indigo-500/30"
+              />
             </div>
             
+            {/* Header Info */}
+            <div className="flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold mb-2">John Amao.</h1>
+              <h2 className="text-lg md:text-xl text-indigo-400 mb-2">FullStack + AI Engineer</h2>
+              <p className="text-indigo-300 mb-4">www.johnamao.com</p>
+              
+              <div className="flex space-x-4">
+                <a href="mailto:amaojohn767@gmail.com" className="text-white hover:text-indigo-400 transition-colors">
+                  <FaEnvelope className="text-xl" />
+                </a>
+                <a href="https://linkedin.com/in/john-amao-7352631b7/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors">
+                  <FaLinkedin className="text-xl" />
+                </a>
+                <a href="https://github.com/john-amao" target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors">
+                  <FaGithub className="text-xl" />
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">Professional Summary</h2>
-          <p className="text-lg leading-relaxed">
-            I am a Full Stack Developer with a strong foundation in both front-end and back-end technologies. 
-            Experienced in developing and deploying scalable web applications using modern frameworks and tools.
-            I also have experience integrating AI capabilities into web applications, to significantly improve functionality.
-            I love to create intuitive user interfaces and optimizing backend systems for peak performance.
-          </p>
-        </section>
+          {/* About me Section */}
+          <section className="mb-10">
+            <h2 className="text-2xl font-bold mb-4">About me:</h2>
+            <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10">
+              <p className="text-gray-300 leading-relaxed">
+                I am a Full Stack Developer with a strong foundation in both front-end and back-end technologies capable of building both on the web and mobile. 
+                I am Experienced in developing and deploying scalable web applications using modern frameworks and tools.
+                I also have experience integrating AI capabilities into web applications, to significantly improve functionality.
+                I love to create intuitive user interfaces and optimizing backend systems for peak performance.
+                Here are some things you might find interesting: I have singlehandedly implemented the architecture and functionality of a full on agentic system capable of extracting structured spreadsheet data from the web check procesaur in <Link href="/projects" className="text-blue-500 hover:text-blue-400 transition-colors">projects</Link> page.
+              </p>
+            </div>
+          </section>
 
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold mb-6">Skills</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <SkillCategory title="Languages" icon={<FaCode className="text-indigo-500 text-2xl" />} skills={languages} />
-            <SkillCategory title="Frameworks & Libraries" icon={<FaDatabase className="text-purple-500 text-2xl" />} skills={frameworks} />
-            <SkillCategory title="Tools & Technologies" icon={<FaTools className="text-pink-500 text-2xl" />} skills={tools} />
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Projects Section */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4">Projects.</h2>
+              <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10">
+                <p className="text-sm text-gray-400 mb-4 italic">To View All: johnamao.com/projects</p>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-2">
+                    <span className="text-gray-300">Procesaur</span>
+                    <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-medium">Latest</span>
+                  </li>
+                  <li className="text-gray-300">WorkPilot</li>
+                  <li className="text-gray-300">xHangout</li>
+                  <li className="text-gray-300">SkillSphere</li>
+                  <li className="text-gray-300">Spectrum Bank</li>
+                  <li className="text-gray-300">SkillSphere AI</li>
+                  <li className="text-gray-300">looplearn</li>
+                  <li className="text-gray-300">Viralytics</li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Skills and Technologies Section */}
+            <section>
+              <h2 className="text-2xl font-bold mb-4">Skills and Technologies</h2>
+              <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10">
+                <ul className="space-y-2 text-gray-300">
+                  <li>• Next.js</li>
+                  <li>• Tailwind</li>
+                  <li>• Python</li>
+                  <li>• JavaScript</li>
+                  <li>• TypeScript</li>
+                  <li>• React</li>
+                  <li>• React Native</li>
+                  <li>• Prisma</li>
+                  <li>• Node.js</li>
+                  <li>• Express.js</li>
+                  <li>• Django</li>
+                  <li>• Figma</li>
+                  <li>• Docker</li>
+                  <li>• Postman</li>
+                  <li>• Vercel</li>
+                  <li>• Heroku</li>
+                  <li>• AWS</li>
+                  <li>• MongoDB</li>
+                  <li>• Postgres</li>
+                </ul>
+              </div>
+            </section>
           </div>
-        </section>
 
-        </div>
         
-       
+        </div>
       </div>
     </div>
   );

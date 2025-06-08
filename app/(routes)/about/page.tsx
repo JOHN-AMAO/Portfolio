@@ -16,7 +16,7 @@ const Page = () => {
   
   
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8  md:mx-20">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-16">
         <div className="flex flex-col gap-6 w-full">
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl mb-4 font-extrabold tracking-tight leading-tight">
