@@ -29,6 +29,13 @@ const DesktopSidebar = () => {
     return pathname.startsWith(href);
   };
 
+  // Check if the current path is a blog post
+  const isBlogPost = pathname?.startsWith('/blog/') && pathname !== '/blog';
+
+  if (isBlogPost) {
+    return null; // Don't render the sidebar on blog post pages
+  }
+
   return (
     <div className='hidden lg:inline-block relative'>
      

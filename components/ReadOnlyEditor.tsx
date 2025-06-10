@@ -115,7 +115,7 @@ export function ReadOnlyEditor({ post }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="px-4 sm:px-0">
+    <form onSubmit={handleSubmit(onSubmit)} className="">
       <div className='grid w-full gap-6 sm:gap-10 text-white'>
         <div className='flex w-full items-center justify-between'>
           <div className='flex items-center space-x-4 sm:space-x-10'>
@@ -130,7 +130,7 @@ export function ReadOnlyEditor({ post }) {
             </Link>
           </div>
         </div>
-        <div className='prose prose-stone mx-auto w-full max-w-full sm:max-w-[1000px] dark:prose-invert'>
+        <div className='prose prose-stone w-full max-w-full sm:max-w-[1000px] dark:prose-invert'>
           <h1
             id='title'
             className='w-full resize-none appearance-none overflow-hidden bg-transparent text-3xl sm:text-5xl font-bold focus:outline-none'
@@ -139,7 +139,7 @@ export function ReadOnlyEditor({ post }) {
           </h1>
           <div
             id='editor'
-            className='min-h-[300px] sm:min-h-[500px]'
+            className='min-h-[300px] sm:min-h-[500px] '
           />
         </div>
       </div>

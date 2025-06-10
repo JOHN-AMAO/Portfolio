@@ -8,12 +8,12 @@ import { motion } from 'framer-motion'
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="container mx-auto px-4 py-8 flex flex-col gap-8">
-      <div className="lg:w-3/4">
+    <div className="container mx-auto  py-8 flex flex-col items-center gap-2">
+      <div className="lg:w-1/2 mr-0 lg:mr-80">
         {children}
       </div>
-      <div className="lg:w-1/4 lg:fixed lg:top-8 lg:right-8 mb-16">
-        <div className="flex flex-col gap-4 mr-8 lg:mr-0">
+      <div className="w-full max-w-sm mx-auto lg:w-1/4 lg:fixed lg:top-8 lg:right-8 lg:mx-0 lg:max-w-none mb-16">
+        <div className="flex flex-col gap-4 mr-0 lg:mr-0">
           <motion.div 
             className="relative"
             whileHover={{ scale: 1.05 }}
@@ -39,7 +39,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             >
               <div className="w-[150px] h-[150px] mx-auto mb-4 overflow-hidden rounded-full">
                 <Image
-                  src="/myimage.png"
+                  src="/john-amao.jpeg"
                   alt="John Amao"
                   width={150}
                   height={150}

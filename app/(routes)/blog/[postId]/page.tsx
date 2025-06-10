@@ -27,7 +27,7 @@ export default async function EditorPage({ params }: EditorPageProps) {
 
   return (
     <>
-      <div className='md:ml-20'>
+      <div className=''>
         <ReadOnlyEditor
           post={{
             id: post.id,
