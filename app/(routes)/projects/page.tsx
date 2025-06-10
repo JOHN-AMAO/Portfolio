@@ -18,9 +18,9 @@ const noiseBackground = {
 
 const Page = () => {
   return (
-    <div className='flex flex-col gap-6 justify-center text-white items-center md:ml-20'>
-      <div className=' flex flex-col w-3/4 py-5'>
-        <h1 className={`text-xl md:text-4xl mt-5 mb-5 ${dancingScript.className}`}>Works.</h1>
+    <div className='flex flex-col gap-6 justify-center text-white  '>
+      <div className=' flex flex-col py-5 md:ml-20 ml-5'>
+        <h1 className={`text-xl md:text-4xl mt-5 mb-5  ${dancingScript.className}`}>Works.</h1>
        
         <p className='font-bold text-gray-500'>
           Some cool stuff I&apos;ve built
@@ -38,7 +38,7 @@ const Page = () => {
 
     
 
-      <div className=' md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-x-4 md:gap-y-8 mx-4 mb-60'>
+      <div className=' md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-x-4 md:gap-y-8 mx-4 mb-60 md:ml-20'>
 
 
       <Link href='https://looplearn.app' className="group">

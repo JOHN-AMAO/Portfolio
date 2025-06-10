@@ -43,27 +43,25 @@ const Page = () => {
                 <h3 className={`text-2xl font-bold mb-4 text-white ${dancingScript.className}`}>About Me</h3>
                 <div className={`text-white text-lg mb-8 leading-relaxed `}>
                   <p className="mb-4">
-                    I&apos;m John, a passionate fullstack developer based in Nigeria 📍. With 3 years of experience in programming, I&apos;ve dedicated my time to building digital solutions to problems.
+                    I have been a software engineer for about 3 years, been obessing and learning about tech and business for about 7 years.
+                    I was inpired my the amazing things people like Mark Zuckerberg and Bill Gates could do at a young age and that got me interested in Technology.
                   </p>
                   <p>
-                    When I&apos;m not coding, you can find me reading about new technology and philosophy, or watching random YouTube videos. I&apos;m always eager to explore and collaborate on new technologies and ideas, and{" "}
-                    <Link href="mailto:amaojohn767@gmail.com" className="text-blue-400 hover:text-blue-300 underline transition-colors">
-                      connect
-                    </Link>{" "}
-                    with like-minded professionals.
+                    When I&apos;m not coding, I build be watching Netflix, reading a random academic paper(sometimes), staying up to date on X or watching random YouTube videos or I could just be brain rotting on IG. I&apos;m always eager to explore and collaborate on new technologies and ideas
+                    
                   </p>
                 </div>
            
                 <h3 className={`text-2xl font-bold mb-4 text-white ${dancingScript.className}`}>What I&apos;m Into 🌟</h3>
                 <div className="text-white text-lg leading-relaxed">
                   <p>
-                    Music is a huge part of my life 🎵 - I&apos;m always vibing to some rap, Afrobeats, or pop music depending on my mood. There&apos;s something about a good beat that just gets me in the zone, whether I&apos;m coding or just chilling.
+                    I love Music 🎵 - I&apos;m always vibing to some rap, Afrobeats, or pop music depending on my mood. 
                   </p>
                   <p className="mt-4">
-                    I&apos;m also pretty deep into philosophy 🤔, especially the darker stuff like absurdism, stoicism, and nihilism. I know, I know, sounds depressing, but there&apos;s actually something oddly comforting about contemplating the meaninglessness of existence while building meaningful software.
+                    I enjoy learning about philosophical concepts as well 🤔, concepts like absurdism, stoicism, and nihilism. It allows me to reflect, feel and go beyond the abstract. 
                   </p>
                   <p className="mt-4">
-                    When I need to unwind, you&apos;ll find me gaming 🎮 or binge-watching movies and stand-up comedy 🎻. There&apos;s nothing like a good laugh after debugging code for hours. And yeah, I&apos;m one of those people who actually enjoys reading 📚 - give me a good book and I&apos;m set for the weekend.
+                    When I need to unwind, you&apos;ll find me gaming 🎮 or binge-watching movies and stand-up comedy .
                   </p>
                 </div>
               </div>
@@ -82,10 +80,7 @@ const Page = () => {
 
             </div>
 
-
             </div>
-            
-         
           </div>
        
         </div>

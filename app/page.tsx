@@ -150,7 +150,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/about">
-                <Button variant="outline" className="bg-gray-900/60 border-white/20 text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 rounded-xl px-8 py-6 text-base font-medium backdrop-blur-sm">
+                <Button variant="outline" className="bg-gray-900/60 border-white/20 text-white hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 rounded-xl px-8 py-6 text-base font-medium backdrop-blur-sm">
                   About Me
                 </Button>
               </Link>
@@ -234,10 +234,10 @@ export default function Home() {
             </div>
             
             <p className="mb-8 text-white/80 text-lg leading-relaxed">
-              I am a Fullstack Engineer interested in and studying machine
-              learning. I think of myself as a product person, as I like to
-              envision projects from ideas to end users. I also employ
-              various technologies and frameworks in building products.
+           
+          I am a Software Engineer with expertise in web, mobile, and AI development. I excel at solving complex problems
+          spanning architecture and systems design, while also focusing on how technology can optimize business operations.
+          I leverage diverse technologies and frameworks to build comprehensive products.   
             </p>
             
             <Link href="/about">
