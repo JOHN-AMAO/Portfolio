@@ -125,8 +125,7 @@ export default function Home() {
                       strings: [
                         "Build My Ideas",
                         "Write and test Code",
-                        "Ship products",
-                        "Learn Everyday",
+                        "Ship products(fast)",
                       ],
                       autoStart: true,
                       loop: true,

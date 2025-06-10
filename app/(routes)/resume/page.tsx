@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCode, FaDatabase, FaTools, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import {  FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,15 +20,7 @@ const SkillCategory = ({ title, icon, skills }: { title: string, icon: React.Rea
 );
 
 const Page = () => {
-  const languages = ["Python", "TypeScript", "JavaScript", "HTML", "CSS", "SQL"];
-  const frameworks = [
-    "React", "Next.js", "Node.js", "Express.js", "Django", 
-    "Tailwind CSS", "Bootstrap", "Material-UI", "Shadcn UI", "Redux", 
-  ];
-  const tools = [
-    "Git", "GitHub", "Docker", "Kubernetes", "AWS", "Vercel", "Heroku",
-    "Postman", "Jest", "Cypress", "Webpack", "Babel", "ESLint", "Prettier"
-  ];
+
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20 text-white md:mx-20">
@@ -43,7 +35,7 @@ const Page = () => {
             {/* Profile Image */}
             <div className="w-32 h-32 md:w-40 md:h-40 relative flex-shrink-0">
               <Image
-                src="/myimage.png"
+                src="/john-amao.jpeg"
                 alt="John Amao"
                 layout="fill"
                 objectFit="cover"
@@ -75,7 +67,7 @@ const Page = () => {
           <section className="mb-10">
             <h2 className="text-2xl font-bold mb-4">About me:</h2>
             <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10">
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-gray-300 leading-relaxed text-sm md:text-base">
                 I am a Full Stack Developer with a strong foundation in both front-end and back-end technologies capable of building both on the web and mobile. 
                 I am Experienced in developing and deploying scalable web applications using modern frameworks and tools.
                 I also have experience integrating AI capabilities into web applications, to significantly improve functionality.
@@ -85,12 +77,12 @@ const Page = () => {
             </div>
           </section>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8  text-sm md:text-base">
             {/* Projects Section */}
             <section>
               <h2 className="text-2xl font-bold mb-4">Projects.</h2>
               <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10">
-                <p className="text-sm text-gray-400 mb-4 italic">To View All: johnamao.com/projects</p>
+                <p className="text-sm text-gray-400 mb-4 italic">To View All: <Link href="/projects" className="text-blue-500 hover:underline"> johnamao.com/projects </Link> </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2">
                     <span className="text-gray-300">Procesaur</span>
