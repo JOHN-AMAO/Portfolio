@@ -41,7 +41,7 @@ const Page = () => {
       <div className=' md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-x-4 md:gap-y-8 mx-4 mb-60 md:ml-20'>
 
 
-      <Link href='https://looplearn.app' className="group">
+      <Link href='https://procesaur.com' className="group">
           <div className="relative">
             {/* Background stacked card */}
             <div 
