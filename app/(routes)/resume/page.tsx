@@ -2,6 +2,7 @@ import React from "react";
 import {  FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
+import { techStack } from "@/lib/stack";
 
 const SkillCategory = ({ title, icon, skills }: { title: string, icon: React.ReactNode, skills: string[] }) => (
   <div className="bg-[#1a2547] rounded-lg p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
@@ -102,28 +103,31 @@ const Page = () => {
             {/* Skills and Technologies Section */}
             <section>
               <h2 className="text-2xl font-bold mb-4">Skills and Technologies</h2>
-              <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10">
-                <ul className="space-y-2 text-gray-300">
-                  <li>• Next.js</li>
-                  <li>• Tailwind</li>
-                  <li>• Python</li>
-                  <li>• JavaScript</li>
-                  <li>• TypeScript</li>
-                  <li>• React</li>
-                  <li>• React Native</li>
-                  <li>• Prisma</li>
-                  <li>• Node.js</li>
-                  <li>• Express.js</li>
-                  <li>• Django</li>
-                  <li>• Figma</li>
-                  <li>• Docker</li>
-                  <li>• Postman</li>
-                  <li>• Vercel</li>
-                  <li>• Heroku</li>
-                  <li>• AWS</li>
-                  <li>• MongoDB</li>
-                  <li>• Postgres</li>
-                </ul>
+              <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10 space-y-8">
+                {Object.entries(techStack).map(([category, items]) => (
+                  <div key={category}>
+                    <h3 className="text-lg font-semibold text-indigo-400 mb-4 border-b border-indigo-500/20 pb-2">{category}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                      {items.map((item, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center gap-3 "
+                        >
+                          <div className="w-8 h-8 flex items-center justify-center bg-white rounded-md overflow-hidden">
+                            <Image
+                              src={item.svg}
+                              alt={item.name}
+                              width={32}
+                              height={32}
+                              className="w-full h-full object-contain p-[0.2rem]"
+                            />
+                          </div>
+                          <span className="text-gray-300 text-sm font-medium">{item.name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
           </div>

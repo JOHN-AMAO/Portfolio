@@ -41,7 +41,7 @@ const Page = () => {
       <div className=' md:grid md:grid-cols-3 flex flex-col gap-8 md:gap-x-4 md:gap-y-8 mx-4 mb-60 md:ml-20'>
 
 
-      <Link href='https://procesaur.com' className="group">
+      <Link href='/projects/procesaur' className="group">
           <div className="relative">
             {/* Background stacked card */}
             <div 
@@ -79,7 +79,7 @@ const Page = () => {
           </div>
         </Link>
 
-      <Link href='' className="group">
+      <Link href='/projects/viralytics' className="group">
           <div className="relative">
             {/* Background stacked card */}
             <div 
@@ -116,9 +116,46 @@ const Page = () => {
             </div>
           </div>
         </Link>
-      
 
-      <Link href='https://looplearn.app' className="group">
+        <Link href='/projects/recall-ai' className="group">
+          <div className="relative">
+            {/* Background stacked card */}
+            <div 
+              className='absolute top-2 left-0 w-full h-full bg-gradient-to-br from-[#0f1329] to-[#0c1428] rounded-xl border border-gray-800/30 -z-10'
+              style={noiseBackground}
+            ></div>
+            {/* Main card */}
+            <div 
+              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 overflow-hidden border border-gray-700/50 relative'
+            >
+              <div className='relative w-full h-36 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden'>
+                <Image 
+                  src="/projects/recall-ai.png" 
+                  fill
+                  className="object-cover"
+                  alt="recall-ai"
+                />
+                <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent'></div>
+                <div className='absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                  <FaExternalLinkAlt className="text-white/80 text-sm" />
+                </div>
+              </div>
+              <div className='p-4 relative z-20'>
+                <div className='flex flex-row justify-between items-start mb-3'>
+                  <h1 className='text-lg font-semibold'>Recall AI</h1>
+                  <span className='px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 border border-green-500/30 backdrop-blur-sm'>
+                    Tool
+                  </span>
+                </div>
+                <p className='text-gray-300 text-sm leading-relaxed'>
+                  Recall AI is a study mobile app with AI powered flashcards and a study reminder
+                </p>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+      <Link href='/projects/looplearn' className="group">
           <div className="relative">
             {/* Background stacked card */}
             <div 
@@ -156,7 +193,7 @@ const Page = () => {
           </div>
         </Link>
 
-        <Link href='https://youtu.be/fkluyMvBKTs' className="group">
+        <Link href='/projects/workpilot' className="group">
           <div className="relative">
             {/* Background stacked card */}
             <div 
@@ -196,43 +233,7 @@ const Page = () => {
    
 
       
-        <Link href='https://skill-sphere.vercel.app/' className="group">
-          <div className="relative">
-            {/* Background stacked card */}
-            <div 
-              className='absolute top-2 left-0 w-full h-full bg-gradient-to-br from-[#0f1329] to-[#0c1428] rounded-xl border border-gray-800/30 -z-10'
-              style={noiseBackground}
-            ></div>
-            {/* Main card */}
-            <div 
-              className='flex flex-col bg-gradient-to-br from-[#142149] to-[#0f1937] rounded-xl transition-all duration-500 overflow-hidden border border-gray-700/50 relative'
-            >
-              <div className='relative w-full h-36 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden'>
-                <Image 
-                  src="/projects/skillsphere.png" 
-                  fill
-                  className="object-cover"
-                  alt="skillsphere"
-                />
-                <div className='absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent'></div>
-                <div className='absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                  <FaExternalLinkAlt className="text-white/80 text-sm" />
-                </div>
-              </div>
-              <div className='p-4 relative z-20'>
-                <div className='flex flex-row justify-between items-start mb-3'>
-                  <h1 className='text-lg font-semibold'>SkillSphere</h1>
-                  <span className='px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 border border-blue-500/30 backdrop-blur-sm'>
-                    Hackathon
-                  </span>
-                </div>
-                <p className='text-gray-300 text-sm leading-relaxed'>
-                  SkillSphere is an Edtech platform that allows anyone to teach online by creating live classes and allowing students to join from anywhere in the world.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Link>
+     
 
       
       
