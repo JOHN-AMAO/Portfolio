@@ -1,0 +1,94 @@
+.liquidGlass {
+  /* The element already has Tailwind classes for fixed bottom bar; this class adds the liquid glass accents */
+  overflow: hidden;
+}
+
+.liquidGlass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* Edge refraction/highlight at the top edge to emulate curved glass */
+  /* Moved highlight to bottom edge */
+ 
+}
+
+.liquidGlass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  /* Soft inner shadow to create thickness */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* Loading sweep across the top edge while navigating */
+.isLoading.liquidGlass::after {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 12px 30px rgba(0,0,0,0.35);
+}
+
+.isLoading.liquidGlass::before {
+  /* Stronger bottom highlight while loading */
+  background:
+    radial-gradient(120% 60% at 50% 110%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.10) 45%, rgba(255,255,255,0) 60%),
+    linear-gradient(to top, rgba(255,255,255,0.18), rgba(255,255,255,0) 30%);
+}
+
+.isLoadingOverlay {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: -40%;
+  height: 2px;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+  filter: blur(0.5px);
+  animation: slideAcross 900ms ease-in-out infinite;
+}
+
+@keyframes slideAcross {
+  0% { transform: translateX(0%); opacity: 0.2; }
+  35% { opacity: 1; }
+  100% { transform: translateX(260%); opacity: 0.2; }
+}
+
+/* Icon wrapper and rotating progress ring */
+.iconWrap {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+}
+
+.progressRing::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 9999px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255,255,255,0.15) 0deg,
+    rgba(255,255,255,0.55) 120deg,
+    rgba(255,255,255,0.15) 240deg,
+    rgba(255,255,255,0.55) 360deg
+  );
+  animation: spin 900ms linear infinite;
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px));
+  opacity: 0.9;
+}
+
+.progressRing::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.08) inset;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+

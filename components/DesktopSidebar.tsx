@@ -37,7 +37,7 @@ const DesktopSidebar = () => {
   }
 
   return (
-    <div className='hidden lg:inline-block relative'>
+    <div className='hidden lg:inline-block relative '>
      
       <div className="relative ml-[20px] mt-6">
         
@@ -46,13 +46,13 @@ const DesktopSidebar = () => {
 
       <div className='flex flex-col gap-4 justify-center h-screen ml-5'>
         {/* Sidebar container with glass morphism and light beams */}
-        <div className='relative'>
+        <div className='relative  '>
           
           <motion.div 
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className='relative flex flex-col gap-8 backdrop-blur-md bg-gray-900/60 rounded-2xl border border-white/10 px-4 py-8 shadow-xl w-20'
+            className='relative flex flex-col gap-8 backdrop-blur-md bg-black/10 rounded-3xl border border-white/10 px-4 py-8 shadow-xl w-20'
           >
             {links.map((link, index) => (
               <motion.div
