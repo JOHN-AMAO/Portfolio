@@ -1,91 +1,128 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
 import Link from "next/link";
-import { Dancing_Script } from "next/font/google";
+import { Manrope } from "next/font/google";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
-const dancingScript = Dancing_Script({ 
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"]
+  weight: ["400", "500", "600", "700", "800"],
 });
 
+const fadeIn = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.15, duration: 0.5 },
+  }),
+};
 
 const Page = () => {
-
-  
-  
   return (
-    <div className="container mx-auto px-4 py-8  md:mx-20">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 mb-16">
-        <div className="flex flex-col gap-6 w-full">
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl mb-4 font-extrabold tracking-tight leading-tight">
-            Hi, I&apos;m{" "}
-            <span className={`bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text ${dancingScript.className}`}>
-              John Amao
-            </span>
-          </h1>
-          <div className="space-y-4">
-        
-            <div className="space-y-12">
-            <div
-            className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-8 transition-all duration-500 hover:border-indigo-500/30 group flex-1 relative overflow-hidden"
-            
-          >
-            {/* Decorative elements */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-indigo-500/20 rounded-full blur-xl  opacity-100 transition-opacity duration-700"></div>
-            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl  opacity-100 transition-opacity duration-700"></div>
-             
-            {/* Content layout with text on left and image on right */}
-            <div className="flex flex-col md:flex-row gap-8 items-start">
-              {/* Text content on the left */}
-              <div className="flex-1">
-                <h3 className={`text-2xl font-bold mb-4 text-white ${dancingScript.className}`}>About Me</h3>
-                <div className={`text-white text-lg mb-8 leading-relaxed `}>
-                  <p className="mb-4">
-                    I have been a software engineer for about 3 years, been obessing and learning about tech and business for about 7 years.
-                    I was inpired my the amazing things people like Mark Zuckerberg and Bill Gates could do at a young age and that got me interested in Technology.
-                  </p>
-                  <p>
-                    When I&apos;m not coding, I build be watching Netflix, reading a random academic paper(sometimes), staying up to date on X or watching random YouTube videos or I could just be brain rotting on IG. I&apos;m always eager to explore and collaborate on new technologies and ideas
-                    
-                  </p>
-                </div>
-           
-                <h3 className={`text-2xl font-bold mb-4 text-white ${dancingScript.className}`}>What I&apos;m Into 🌟</h3>
-                <div className="text-white text-lg leading-relaxed">
-                  <p>
-                    I love Music 🎵 - I&apos;m always vibing to some rap, Afrobeats, or pop music depending on my mood. 
-                  </p>
-                  <p className="mt-4">
-                    I enjoy learning about philosophical concepts as well 🤔, concepts like absurdism, stoicism, and nihilism. It allows me to reflect, feel and go beyond the abstract. 
-                  </p>
-                  <p className="mt-4">
-                    When I need to unwind, you&apos;ll find me gaming 🎮 or binge-watching movies and stand-up comedy .
-                  </p>
-                </div>
-              </div>
-
-              {/* Image on the right */}
-              <div className="flex-shrink-0">
-                <Image 
-                  src="/john-amao.jpeg" 
-                  width={300} 
-                  height={400} 
-                  alt="an image of John Amao" 
-                  className="rounded-2xl shadow-lg object-cover"
-                />
-              </div>
-            </div>
-
-            </div>
-
-            </div>
-          </div>
-       
-        </div>
+    <main className="min-h-screen relative overflow-hidden w-full flex-1">
+      {/* Background elements */}
+      <div className="absolute inset-0 -z-10 bg-[#0a0f24]">
+        <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 rounded-full bg-indigo-600/20 blur-[100px]" />
+        <div className="absolute bottom-40 right-1/4 w-80 h-80 rounded-full bg-purple-600/20 blur-[90px] opacity-40 sm:opacity-100 sm:blur-[120px]" />
+        <div className="hidden sm:block absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-pink-600/20 blur-[100px]" />
       </div>
-    </div>
+
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 -z-5 bg-[url('/grid-pattern.svg')] bg-repeat opacity-[0.02]" />
+
+      <div className={`${manrope.className} mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16 relative z-10 w-full max-w-7xl`}>
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12"
+        >
+          {/* Left: Content */}
+          <div className="flex-1 flex flex-col gap-8">
+            <motion.div
+              custom={0}
+              variants={fadeIn}
+              className="inline-flex w-fit items-center px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm backdrop-blur-sm"
+            >
+              About
+            </motion.div>
+
+            <motion.h1
+              custom={1}
+              variants={fadeIn}
+              className="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
+            >
+              A bit about me
+             
+             
+            </motion.h1>
+
+            <motion.div
+              custom={2}
+              variants={fadeIn}
+              className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-5 sm:p-6 md:p-8 transition-all duration-500 hover:border-indigo-500/30 group relative overflow-hidden"
+            >
+              <div className="hidden sm:block absolute -top-24 -right-24 w-56 h-56 bg-indigo-500/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="hidden sm:block absolute -bottom-24 -left-24 w-56 h-56 bg-purple-500/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start relative z-10">
+                <div className="w-full md:max-w-sm relative order-1 md:order-2">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur-sm sm:blur opacity-40 md:opacity-60" />
+                  <div className="absolute inset-0 rounded-2xl bg-gray-900/80 backdrop-blur-sm" />
+                  <Image
+                    src="/john-amao.jpeg"
+                    width={480}
+                    height={600}
+                    alt="Photo of John Amao"
+                    className="rounded-2xl w-full h-auto relative z-10 shadow-2xl object-cover"
+                    priority
+                  />
+                </div>
+
+                <div className="flex-1 order-2 md:order-1">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white">About Me</h3>
+                  <div className="text-white/90 text-base sm:text-lg leading-relaxed space-y-4">
+                    <p>
+                      I have been a software engineer for about 3 years and have been obsessed with learning about tech and business for roughly 7 years. I was inspired by how people like Mark Zuckerberg and Bill Gates built impactful products at a young age, which sparked my interest in technology.
+                    </p>
+                    <p>
+                      When I&apos;m not coding, you&apos;ll often find me watching Netflix, reading a random academic paper (sometimes), staying up to date on X, or going down YouTube rabbit holes. Occasionally, I&apos;m just brain-rotting on IG. I&apos;m always eager to explore and collaborate on new technologies and ideas.
+                    </p>
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl font-bold mt-6 sm:mt-8 mb-3 sm:mb-4 text-white">What I&apos;m Into 🌟</h3>
+                  <div className="text-white/90 text-base sm:text-lg leading-relaxed">
+                    <ul className="space-y-3 list-disc pl-5">
+                      <li>Music 🎵 — usually rap, Afrobeats, or pop depending on my mood.</li>
+                      <li>Philosophy 🤔 — absurdism, stoicism, nihilism; reflecting beyond the abstract.</li>
+                      <li>Gaming 🎮, movies, and stand-up comedy to unwind.</li>
+                    </ul>
+                  </div>
+
+                  <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                    <Link href="/projects">
+                      <Button className="w-full sm:w-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 rounded-xl px-5 py-4 md:px-6 md:py-5 text-sm md:text-base font-medium">
+                        View My Work
+                      </Button>
+                    </Link>
+                    <Link href="/blog">
+                      <Button
+                        variant="outline"
+                        className="w-full sm:w-auto bg-gray-900/60 border-white/20 text-white hover:text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 rounded-xl px-5 py-4 md:px-6 md:py-5 text-sm md:text-base font-medium backdrop-blur-sm"
+                      >
+                        Read My Blog
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+    </main>
   );
 };
 

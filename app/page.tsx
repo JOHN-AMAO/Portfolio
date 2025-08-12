@@ -10,7 +10,6 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const [isHovered, setIsHovered] = useState(false);
-  const [isMobileDockOpen, setIsMobileDockOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
   const socialLinks = [
@@ -29,22 +28,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    if (isMobileDockOpen) {
-      document.body.style.backgroundColor = "rgba(10, 15, 36, 0.9)";
-      document.body.style.backdropFilter = "blur(8px)";
-      document.body.style.transition = "background-color 0.3s ease, backdrop-filter 0.3s ease";
-    } else {
-      document.body.style.backgroundColor = "";
-      document.body.style.backdropFilter = "";
-    }
-
-    return () => {
-      document.body.style.backgroundColor = "";
-      document.body.style.backdropFilter = "";
-      document.body.style.transition = "";
-    };
-  }, [isMobileDockOpen]);
+ 
 
   // Animation variants
   const fadeIn = {
@@ -160,7 +144,7 @@ export default function Home() {
                 items={socialLinks} 
                 desktopClassName="hidden md:flex bg-gray-900/50 border border-white/10 backdrop-blur-lg z-10 relative shadow-xl"
                 mobileClassName="flex md:hidden bg-gray-900/50 border border-white/10 backdrop-blur-lg z-10 relative shadow-xl"
-                onOpenChange={setIsMobileDockOpen}
+               
               />
           </div>
           
