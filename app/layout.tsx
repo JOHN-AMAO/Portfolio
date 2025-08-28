@@ -18,8 +18,8 @@ export const metadata: Metadata = {
     title: "John Amao || AJy - Personal Website",
     description: "Explore John Amao's portfolio, blog, and projects. Full-stack developer passionate about web technologies and innovation.",
     images: "/my-image.png", // Replace with your actual OG image URL
-    site: "@johnamao4",
-    creator: "@johnamao4", // Use 'creator' instead of 'handle'
+    site: "@johnama0",
+    creator: "@johnama0", // Use 'creator' instead of 'handle'
   },
 };
 

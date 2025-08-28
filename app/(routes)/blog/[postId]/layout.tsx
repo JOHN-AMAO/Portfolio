@@ -63,7 +63,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               </a>
             </DockIcon>
             <DockIcon className="text-white hover:text-blue-400 transition-colors duration-200">
-              <a href="https://x.com/johnamao4" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/johnama0" target="_blank" rel="noopener noreferrer">
                 <FaTwitter className="size-6" />
               </a>
             </DockIcon>

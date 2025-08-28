@@ -16,7 +16,7 @@ export default function Home() {
     { title: "Mail", icon: <FaEnvelope />, href: "mailto:amaojohn767@gmail.com" }, 
     { title: "Github", icon: <FaGithub />, href: "https://github.com/JOHN-AMAO" },
     { title: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/john-amao-7352631b7/" },
-    { title: "X", icon: <FaTwitter />, href: "https://x.com/JOHNAMAO4" },
+    { title: "X", icon: <FaTwitter />, href: "https://x.com/johnama0" },
   ];
 
   useEffect(() => {
