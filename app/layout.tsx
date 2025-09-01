@@ -10,12 +10,12 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "John Amao: Fullstack Software Engineer(Web & Mobile) & AI Engineer",
-  description: "I develop modern applications across the full stack, combining front-end, backend, and AI to create reliable, defensible products",
+  description: "I develop modern applications across the full stack(Web & Mobile), combining front-end, backend, and AI to create reliable, defensible products",
   icons: "./favicon.ico",
   twitter: {
     card: "summary_large_image",
     title: "John Amao: Fullstack Software Engineer(Web & Mobile) & AI Engineer",
-    description: "I develop modern applications across the full stack, combining front-end, backend, and AI to create reliable, defensible products",
+    description: "I develop modern applications across the full stack(Web & Mobile), combining front-end, backend, and AI to create reliable, defensible products",
     images: "/my-image.png", 
     site: "@johnama0",
     creator: "@johnama0", 
