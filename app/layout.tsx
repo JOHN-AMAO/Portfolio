@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "John Amao: Fullstack Software Engineer(Web & Mobile) & AI Engineer",
     description: "I develop modern applications across the full stack(Web & Mobile), combining front-end, backend, and AI to create reliable, defensible products",
-    images: "/my-image.png", 
+    images: "/banner.jpg", 
     site: "@johnama0",
     creator: "@johnama0", 
   },
