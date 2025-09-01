@@ -4,22 +4,21 @@ import "./globals.css";
 import DesktopSidebar from "@/components/DesktopSidebar";
 import MobileNav from "@/components/MobileNav";
 import { Analytics } from "@vercel/analytics/react";
-import LeftSideBar from "@/components/LeftSideBar";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "John Amao || AJy",
-  description: "This is the official website of John Amao.",
+  title: "John Amao: Fullstack Software Engineer(Web & Mobile) & AI Engineer",
+  description: "I develop modern applications across the full stack, combining front-end, backend, and AI to create reliable, defensible products",
   icons: "./favicon.ico",
   twitter: {
     card: "summary_large_image",
-    title: "John Amao || AJy - Personal Website",
-    description: "Explore John Amao's portfolio, blog, and projects. Full-stack developer passionate about web technologies and innovation.",
-    images: "/my-image.png", // Replace with your actual OG image URL
+    title: "John Amao: Fullstack Software Engineer(Web & Mobile) & AI Engineer",
+    description: "I develop modern applications across the full stack, combining front-end, backend, and AI to create reliable, defensible products",
+    images: "/my-image.png", 
     site: "@johnama0",
-    creator: "@johnama0", // Use 'creator' instead of 'handle'
+    creator: "@johnama0", 
   },
 };
 
