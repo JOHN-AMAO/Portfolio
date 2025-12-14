@@ -47,9 +47,9 @@ export default function Home() {
     <main className="min-h-screen relative overflow-hidden w-full flex-1">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10 bg-[#0a0f24]">
-        <div className="absolute top-20 left-1/4 w-72 h-72 rounded-full bg-indigo-600/20 blur-[100px]" />
-        <div className="absolute bottom-40 right-1/4 w-80 h-80 rounded-full bg-purple-600/20 blur-[120px]" />
-        <div className="absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-pink-600/20 blur-[100px]" />
+        <div className="absolute top-20 left-1/4 w-72 h-72 rounded-full bg-blue-600/20 blur-[100px]" />
+        <div className="absolute bottom-40 right-1/4 w-80 h-80 rounded-full bg-blue-600/20 blur-[120px]" />
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-white/20 blur-[100px]" />
       </div>
 
       {/* Grid pattern overlay */}
@@ -67,11 +67,11 @@ export default function Home() {
             <motion.div 
               custom={0} 
               variants={fadeIn} 
-              className="inline-flex w-fit items-center px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm backdrop-blur-sm"
+              className="inline-flex w-fit items-center px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm backdrop-blur-sm"
             >
               <span className="relative flex h-2 w-2 mr-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
               </span>
               Available for new projects
             </motion.div>
@@ -83,10 +83,17 @@ export default function Home() {
             >
               Hi, I&apos;m{" "}
               <span className="relative">
-                <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text relative z-10">
+                <span 
+                  className="text-transparent bg-clip-text relative z-10"
+                  style={{
+                    WebkitBackgroundClip: 'text',
+                    backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 1) 34%, rgba(255, 255, 255, 1) 100%)',
+                    color: 'transparent'
+                  }}
+                >
                   John Amao
                 </span>
-                <span className="absolute -bottom-1 left-0 h-3 w-full bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 blur-sm -z-0"></span>
+                <span className="absolute -bottom-1 left-0 h-3 w-full bg-gradient-to-r from-blue-500/20 via-blue-500/20 to-white/20 blur-sm -z-0"></span>
               </span>
             </motion.h1>
             
@@ -95,7 +102,7 @@ export default function Home() {
               variants={fadeIn}
               className="relative rounded-xl shadow-xl overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-20 blur-sm"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-blue-500 to-white opacity-20 blur-sm"></div>
               <div className="backdrop-blur-sm bg-gray-900/40 border border-white/10 p-6 rounded-xl relative z-10">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="h-3 w-3 rounded-full bg-red-400"></div>
@@ -128,7 +135,14 @@ export default function Home() {
               className="flex gap-4 items-center"
             >
               <Link href="/projects">
-                <Button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 rounded-xl px-8 py-6 text-base font-medium">
+                <Button 
+                  className="text-white hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 rounded-xl px-8 py-6 text-base font-medium"
+                  style={{
+                    background: '',
+                    backgroundColor: 'rgb(27, 11, 176)',
+                    backgroundImage: 'none'
+                  }}
+                >
                   View My Work
                 </Button>
               </Link>
@@ -158,7 +172,7 @@ export default function Home() {
             }}
             className="w-full lg:max-w-md relative"
           >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-70"></div>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-blue-500 to-white rounded-2xl blur opacity-70"></div>
             <div className="absolute inset-0 rounded-2xl bg-gray-900/80 backdrop-blur-sm"></div>
             <Image
               className="rounded-2xl w-full h-auto relative z-10 shadow-2xl transform transition-transform duration-500 hover:scale-[1.02]"
@@ -172,7 +186,7 @@ export default function Home() {
                 transform: `rotateY(${scrollY * 0.01}deg) rotateX(${scrollY * -0.01}deg)`,
               }}
             />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 blur-xl opacity-60 z-0"></div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full blur-xl opacity-60 z-0" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.8) 100%)' }}></div>
           </motion.div>
         </motion.div>
         
@@ -189,16 +203,16 @@ export default function Home() {
 
           {/* Left Column - About Card */}
           <div
-            className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-8 transition-all duration-500 hover:border-indigo-500/30 group flex-1 relative overflow-hidden"
+            className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-8 transition-all duration-500 hover:border-blue-500/30 group flex-1 relative overflow-hidden"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             {/* Decorative elements */}
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-indigo-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-            <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.8) 100%)' }}></div>
+            <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.8) 100%)' }}></div>
             
             <div className="flex items-center gap-4 mb-6 relative z-10">
-              <div className="p-2.5 rounded-lg bg-indigo-500/10 border border-indigo-500/20">
+              <div className="p-2.5 rounded-lg bg-blue-500/10 border border-blue-500/20">
                 <Image
                   className={`transition-all duration-500 ${
                     isHovered ? 'rotate-[360deg]' : ''
@@ -210,7 +224,7 @@ export default function Home() {
                 />
               </div>
               <h2 className={`text-2xl text-white font-bold transition-all duration-300 ${
-                isHovered ? 'text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500' : ''
+                isHovered ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500' : ''
               }`}>
                 Let&apos;s Build Together.
               </h2>
@@ -226,7 +240,7 @@ export default function Home() {
             <Link href="/about">
               <Button 
                 variant="outline" 
-                className="text-white bg-gray-900/60 border-white/30 hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-500 hover:border-transparent hover:text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-300"
+                className="text-white bg-gray-900/60 border-white/30 hover:bg-gradient-to-r hover:from-blue-500 hover:to-blue-500 hover:border-transparent hover:text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-300"
               >
                 Learn More
               </Button>

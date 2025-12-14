@@ -16,7 +16,7 @@ export function DashboardHeader({
           {heading}
         </h1>
         {text && (
-          <p className='text-lg text-white rounded-xl p-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
+          <p className='text-lg text-white rounded-xl p-2 bg-gradient-to-r from-blue-500 via-blue-500 to-white/70'>
             {text}
           </p>
         )}

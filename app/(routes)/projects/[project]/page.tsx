@@ -189,7 +189,7 @@ const SocialLink = ({
   const buttonClasses = `
     flex items-center gap-1 md:gap-2 px-2 md:px-4 py-2 rounded-full transition-all duration-300 text-left text-xs md:text-sm
     ${enabled 
-      ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 hover:from-blue-600/30 hover:to-purple-600/30 hover:border-blue-400/50 text-white' 
+      ? 'bg-gradient-to-r from-blue-600/20 to-blue-600/20 border border-blue-500/30 hover:from-blue-600/30 hover:to-blue-600/30 hover:border-blue-400/50 text-white' 
       : 'bg-gray-800/50 border border-gray-700/50 text-gray-500 cursor-not-allowed'
     }
   `;
@@ -237,7 +237,7 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
               </h1>
               <span className={`px-2 py-1 text-xs font-medium rounded-full mt-1 ${
                 project.category === 'Tool' ? 'bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 border border-green-500/30' :
-                project.category === 'Startup' ? 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400 border border-purple-500/30' :
+                project.category === 'Startup' ? 'bg-gradient-to-r from-blue-500/20 to-white/20 text-blue-400 border border-blue-500/30' :
                 project.category === 'Open Source' ? 'bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 border border-blue-500/30' :
                 'bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-400 border border-orange-500/30'
               }`}>

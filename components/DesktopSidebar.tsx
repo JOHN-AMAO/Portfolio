@@ -67,7 +67,7 @@ const DesktopSidebar = () => {
                 {hoveredLink === link.href && (
                   <motion.div 
                     layoutId="hoverEffect"
-                    className="absolute -inset-1 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-xl blur-sm"
+                    className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-blue-500/20 to-white/20 rounded-xl blur-sm"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -78,14 +78,14 @@ const DesktopSidebar = () => {
                   href={link.href}
                   className={`relative z-10 rounded-xl p-2.5 transition-all duration-200 flex items-center justify-center ${
                     isActive(link.href) 
-                      ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" 
+                      ? "bg-gradient-to-r from-blue-500 via-blue-500 to-white" 
                       : "hover:bg-gray-800/50"
                   }`}
                 >
                   {isActive(link.href) && (
                     <motion.div 
                       layoutId="activeIndicator"
-                      className="absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                      className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500 via-blue-500 to-white"
                       transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     />
                   )}

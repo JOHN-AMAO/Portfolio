@@ -85,19 +85,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #4f46e5, #9333ea, #ec4899);
+  background: #000000;
   border-radius: 6px;
   border: 3px solid #0e1631;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #6366f1, #a855f7, #f472b6);
+  background: #1a1a1a;
 }
 
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #9333ea #0e1631;
+  scrollbar-color: #000000 #0e1631;
 }
 
 /* Global styles to ensure the scrollbar is always visible */
@@ -124,9 +124,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #4f46e5, #9333ea, #ec4899);
-  background-size: 200% 200%;
-  animation: gradientShift 5s ease infinite;
+  background: #000000;
   border-radius: 6px;
   border: 3px solid #0e1631;
 }

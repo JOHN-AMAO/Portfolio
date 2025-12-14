@@ -25,9 +25,9 @@ const Page = () => {
     <main className="min-h-screen relative overflow-hidden w-full flex-1">
       {/* Background elements */}
       <div className="absolute inset-0 -z-10 bg-[#0a0f24]">
-        <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 rounded-full bg-indigo-600/20 blur-[100px]" />
-        <div className="absolute bottom-40 right-1/4 w-80 h-80 rounded-full bg-purple-600/20 blur-[90px] opacity-40 sm:opacity-100 sm:blur-[120px]" />
-        <div className="hidden sm:block absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-pink-600/20 blur-[100px]" />
+        <div className="hidden sm:block absolute top-20 left-1/4 w-72 h-72 rounded-full bg-blue-600/20 blur-[100px]" />
+        <div className="absolute bottom-40 right-1/4 w-80 h-80 rounded-full bg-blue-600/20 blur-[90px] opacity-40 sm:opacity-100 sm:blur-[120px]" />
+        <div className="hidden sm:block absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-white/20 blur-[100px]" />
       </div>
 
       {/* Grid pattern overlay */}
@@ -44,7 +44,7 @@ const Page = () => {
             <motion.div
               custom={0}
               variants={fadeIn}
-              className="inline-flex w-fit items-center px-3 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-indigo-300 text-sm backdrop-blur-sm"
+              className="inline-flex w-fit items-center px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-sm backdrop-blur-sm"
             >
               About
             </motion.div>
@@ -62,14 +62,14 @@ const Page = () => {
             <motion.div
               custom={2}
               variants={fadeIn}
-              className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-5 sm:p-6 md:p-8 transition-all duration-500 hover:border-indigo-500/30 group relative overflow-hidden"
+              className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-5 sm:p-6 md:p-8 transition-all duration-500 hover:border-blue-500/30 group relative overflow-hidden"
             >
-              <div className="hidden sm:block absolute -top-24 -right-24 w-56 h-56 bg-indigo-500/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="hidden sm:block absolute -bottom-24 -left-24 w-56 h-56 bg-purple-500/15 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="hidden sm:block absolute -top-24 -right-24 w-56 h-56 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.8) 100%)' }} />
+              <div className="hidden sm:block absolute -bottom-24 -left-24 w-56 h-56 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.8) 100%)' }} />
 
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start relative z-10">
                 <div className="w-full md:max-w-sm relative order-1 md:order-2">
-                  <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur-sm sm:blur opacity-40 md:opacity-60" />
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 via-blue-500 to-white rounded-2xl blur-sm sm:blur opacity-40 md:opacity-60" />
                   <div className="absolute inset-0 rounded-2xl bg-gray-900/80 backdrop-blur-sm" />
                   <Image
                     src="/john-amao.jpeg"
@@ -103,7 +103,7 @@ const Page = () => {
 
                   <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
                     <Link href="/projects">
-                      <Button className="w-full sm:w-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300 rounded-xl px-5 py-4 md:px-6 md:py-5 text-sm md:text-base font-medium">
+                      <Button className="w-full sm:w-auto bg-gradient-to-r from-blue-500 via-blue-500 to-white text-white hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 rounded-xl px-5 py-4 md:px-6 md:py-5 text-sm md:text-base font-medium">
                         View My Work
                       </Button>
                     </Link>

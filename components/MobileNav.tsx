@@ -43,7 +43,7 @@ const MobileNav = () => {
   }
 
   return (
-    <div className={`md:hidden fixed bottom-1 left-1/2 -translate-x-1/2 w-[92%] max-w-md z-50 rounded-2xl bg-black/90 bg-gradient-to-r from-indigo-500/[0.12] via-purple-500/[0.08] to-pink-500/[0.12] backdrop-filter backdrop-blur-2xl backdrop-saturate-150 border border-white/10 shadow-lg shadow-black/50 ${styles.liquidGlass} ${isNavigating ? styles.isLoading : ''}`}>
+    <div className={`md:hidden fixed bottom-1 left-1/2 -translate-x-1/2 w-[92%] max-w-md z-50 rounded-2xl bg-black/90 bg-gradient-to-r from-blue-500/[0.12] via-blue-500/[0.08] to-white/[0.12] backdrop-filter backdrop-blur-2xl backdrop-saturate-150 border border-white/10 shadow-lg shadow-black/50 ${styles.liquidGlass} ${isNavigating ? styles.isLoading : ''}`}>
       <div className='flex flex-row justify-evenly w-full py-2 px-2'>
         {links.map((link) => {
           const active = isActive(link.href);

@@ -18,7 +18,7 @@ export function PostItemRead({ post, className }: PostItemProps & { className?: 
       <div className='grid gap-1 w-full'>
         <Link
           href={`/blog/${post.id}`}
-          className='font-semibold hover:underline hover:bg-green-800 transition'
+          className='font-semibold hover:underline hover:bg-blue-800 transition'
         >
           {post.title}
         </Link>

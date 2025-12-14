@@ -25,10 +25,10 @@ const Page = () => {
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20 text-white md:mx-20">
-      <div className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl transition-all duration-500 hover:border-indigo-500/30 group flex-1 relative overflow-hidden">
+      <div className="bg-gray-900/60 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl transition-all duration-500 hover:border-blue-500/30 group flex-1 relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-indigo-500/20 rounded-full blur-xl opacity-100 transition-opacity duration-700"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl opacity-100 transition-opacity duration-700"></div>
+        <div className="absolute -top-20 -right-20 w-40 h-40 rounded-full blur-xl opacity-100 transition-opacity duration-700" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.8) 100%)' }}></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 rounded-full blur-xl opacity-100 transition-opacity duration-700" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.8) 100%)' }}></div>
         
         <div className="max-w-6xl mx-auto rounded-lg p-8 md:p-12 shadow-xl relative z-10">
           {/* Header Section */}
@@ -40,24 +40,24 @@ const Page = () => {
                 alt="John Amao"
                 layout="fill"
                 objectFit="cover"
-                className="rounded-full border-4 border-indigo-500/30"
+                className="rounded-full border-4 border-blue-500/30"
               />
             </div>
             
             {/* Header Info */}
             <div className="flex-1">
               <h1 className="text-3xl md:text-4xl font-bold mb-2">John Amao.</h1>
-              <h2 className="text-lg md:text-xl text-indigo-400 mb-2">FullStack + AI Engineer</h2>
-              <p className="text-indigo-300 mb-4">www.johnamao.com</p>
+              <h2 className="text-lg md:text-xl text-blue-400 mb-2">FullStack + AI Engineer</h2>
+              <p className="text-blue-300 mb-4">www.johnamao.com</p>
               
               <div className="flex space-x-4">
-                <a href="mailto:amaojohn767@gmail.com" className="text-white hover:text-indigo-400 transition-colors">
+                <a href="mailto:amaojohn767@gmail.com" className="text-white hover:text-blue-400 transition-colors">
                   <FaEnvelope className="text-xl" />
                 </a>
-                <a href="https://linkedin.com/in/john-amao-7352631b7/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors">
+                <a href="https://linkedin.com/in/john-amao-7352631b7/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
                   <FaLinkedin className="text-xl" />
                 </a>
-                <a href="https://github.com/john-amao" target="_blank" rel="noopener noreferrer" className="text-white hover:text-indigo-400 transition-colors">
+                <a href="https://github.com/john-amao" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-400 transition-colors">
                   <FaGithub className="text-xl" />
                 </a>
               </div>
@@ -106,7 +106,7 @@ const Page = () => {
               <div className="bg-[#1a2547]/50 rounded-lg p-6 border border-white/10 space-y-8">
                 {Object.entries(techStack).map(([category, items]) => (
                   <div key={category}>
-                    <h3 className="text-lg font-semibold text-indigo-400 mb-4 border-b border-indigo-500/20 pb-2">{category}</h3>
+                    <h3 className="text-lg font-semibold text-blue-400 mb-4 border-b border-blue-500/20 pb-2">{category}</h3>
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                       {items.map((item, index) => (
                         <div
